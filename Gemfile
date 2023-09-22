@@ -71,7 +71,8 @@ group :test do
   gem "selenium-webdriver"
 
 end
-
+gem 'omniauth'
 gem 'omniauth-google-oauth2'
+
 gem 'dotenv-rails', groups: [:development, :test]
 

@@ -279,6 +279,7 @@ DEPENDENCIES
   dotenv-rails
   importmap-rails
   jbuilder
+  omniauth
   omniauth-google-oauth2
   pg (~> 1.1)
   puma (~> 5.0)
