@@ -8,9 +8,12 @@ Rails.application.routes.draw do
 
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
+  get 'admin_checkin', to: 'users#admin_checkin', as: 'admin_checkin'
+  
 
   # Users routes
   resources :users do
+    post 'admin_checkin', on: :collection
     collection do
       put :grant_admin  # Action to grant admin status.
     end
