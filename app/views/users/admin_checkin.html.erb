@@ -1,9 +1,9 @@
 <h1>Admin Check-In</h1>
 
-<%= form_for :admin_checkin, url: admin_checkin_users_path do |f| %>
+<%= form_for :admin_checkin, url: admin_checkin_path do |f| %>
     <div class="form-group">
-      <%= f.label :user_id, 'Select User' %>
-      <%= f.collection_select :user_id, User.all, :id, :name, prompt: 'Select a User' %>
+        <%= f.label :user_id, 'Select User' %>
+        <%= f.collection_select :user_id, User.all, :id, lambda { |user| "#{user.first_name} #{user.last_name}" }, { prompt: 'Select a User' }, { class: 'form-control' } %>
     </div>
   
     <div class="form-group">

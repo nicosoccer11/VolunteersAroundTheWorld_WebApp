@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   # Users routes
   resources :users do
-    post 'admin_checkin', on: :collection
     collection do
       put :grant_admin  # Action to grant admin status.
     end
