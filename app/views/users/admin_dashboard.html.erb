@@ -19,9 +19,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-        <td><%= user.admin? ? "Yes" : "No" %></td>
+        <td><%= user.isAdmin? ? "Yes" : "No" %></td>
         <td>
-          <% unless user.admin? %>
+          <% unless user.isAdmin? %>
             <%= link_to "Grant Admin", grant_admin_user_path(user), method: :put %>
           <% end %>
         </td>
@@ -29,4 +29,4 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to "Admin Check-In", admin_checkin_users_path %>
+<%= link_to "Admin Check-In", admin_checkin_path %>
