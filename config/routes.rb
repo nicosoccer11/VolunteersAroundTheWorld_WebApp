@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
+  get 'admin_checkin', to: 'users#admin_checkin', as: 'admin_checkin'
+  post 'admin_checkin', to: 'users#admin_checkin'
 
   # Users routes
   resources :users do
