@@ -1,22 +1,12 @@
 Rails.application.routes.draw do
-  # Root route
-  root 'users#home'
+  root 'pages#home'
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # OAuth and signout routes
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'signout', to: 'sessions#destroy', as: 'signout'
-
-  # Admin dashboard route
-  get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
-
-  # Users routes
-  resources :users do
-    collection do
-      put :grant_admin  # Action to grant admin status.
-    end
-  end
-
-  # Events routes
-  resources :events, only: [:index, :new, :create]
+  # Defines the root path route ("/")
+  # root "articles#index"
 end
-
