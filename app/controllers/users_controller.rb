@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    # before_action :ensure_admin, only: [:admin_dashboard, :grant_admin]
+    #before_action :ensure_admin, only: [:admin_dashboard, :grant_admin]
     def home
     end
     def admin_dashboard
@@ -7,15 +7,15 @@ class UsersController < ApplicationController
     end
     
 
-    def grant_admin
-        user = User.find_by(email: params[:email])
-        if user
-          user.update(is_admin: true)
-          redirect_to admin_dashboard_path, notice: "#{user.email} has been granted admin status."
-        else
-          redirect_to admin_dashboard_path, alert: "User with email #{params[:email]} not found."
-        end
-    end
+    #def grant_admin
+    #    user = User.find_by(email: params[:email])
+    #    if user
+    #      user.update(is_admin: true)
+    #      redirect_to admin_dashboard_path, notice: "#{user.email} has been granted admin status."
+    #    else
+    #      redirect_to admin_dashboard_path, alert: "User with email #{params[:email]} not found."
+    #    end
+    #end
 
     def admin_checkin
       puts "inside function"
