@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   # Root route
   root 'users#home'
 
-  # OAuth and signout routes
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
 
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
