@@ -17,6 +17,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_and_redirect user, event: :authentication
       tempUser = User.find_by(email: user.email)
       puts "THIS IS THE USER FOUND BY EMAIL ( #{user.email}): #{tempUser}"
+
       if tempUser
         puts "User already exists"
       else 
