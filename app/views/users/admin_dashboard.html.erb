@@ -214,7 +214,7 @@
                         <button>View Checked-In Users</button>
                         <div class="dropdown-content">
                             <% event.users.each do |user| %> 
-                                <a href="#"><%= user.name %></a> 
+                                <a href="#"><%= user.first_name + " " + user.last_name %></a> 
                             <% end %>
                         </div>
                     </div>
