@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Root route
-  root 'users#admin_dashboard'
+  root 'users#home'
 
   # OAuth and signout routes
   get 'auth/:provider/callback', to: 'sessions#create'
