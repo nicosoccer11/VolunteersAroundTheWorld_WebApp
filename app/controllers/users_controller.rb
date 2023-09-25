@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   
       if request.post?
         event = Event.find(params[:event_id])
-        current_user.events << event 
+        EventsUser.create(user_id: 5, event_id: params[:event_id])
         redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
 
       end
