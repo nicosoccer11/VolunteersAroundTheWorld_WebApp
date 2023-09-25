@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
+  get 'user_dashboard', to: 'users#user_dashboard', as: 'user_dashboard'
+  get 'user_checkin', to: 'users#user_checkin', as: 'user_checkin'
+  post 'user_checkin', to: 'users#checkin'
+  get 'user_dashboard', to: 'users#user_dashboard'
   get 'admin_checkin', to: 'users#admin_checkin', as: 'admin_checkin'
   post 'admin_checkin', to: 'users#admin_checkin'
   get '/users/home', to: 'users#home', as: 'users_home'
@@ -16,11 +20,13 @@ Rails.application.routes.draw do
   # Users routes
   resources :users do
     collection do
-      put :grant_admin  # Action to grant admin status.
+      put :grant_admin
+      get 'checkin'
+      post 'checkin'
     end
   end
 
   # Events routes
-  resources :events, only: [:index, :new, :create]
+  resources :events, only: [:index, :new, :create, :destroy]
 end
 
