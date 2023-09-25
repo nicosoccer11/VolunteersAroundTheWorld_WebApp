@@ -17,6 +17,14 @@ class EventsController < ApplicationController
         end
     end
 
+    def destroy
+        @event = Event.find(params[:id])
+        @event.destroy
+        redirect_to request.referrer || admin_dashboard_path, notice: 'Event was successfully deleted.'
+      end
+      
+      
+      
     private
 
     def event_params
