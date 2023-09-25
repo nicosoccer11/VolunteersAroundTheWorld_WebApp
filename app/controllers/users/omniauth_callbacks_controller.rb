@@ -23,7 +23,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else 
         # HERE IS WHERE YOU NEED TO ADD THE NEW USER
         puts "ADDING NEW USER"
-        newUser = User.create(
             first_name: auth.info.first_name,
             last_name: auth.info.last_name,
             email: auth.info.email,
@@ -31,7 +30,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
             provider: auth.provider,
             uid: auth.uid,
             avatar_url: auth.info.avatar_url
-          )
+          
         puts "#{newUsers}"
         if newUser.persisted?
           # New user created successfully, sign them in
@@ -79,7 +78,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def after_sign_in_path_for(resource_or_scope)
     stored_location_for(resource_or_scope) || user_dashboard_path
-    
+
   end
 
   private
