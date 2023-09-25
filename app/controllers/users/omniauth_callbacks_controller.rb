@@ -8,6 +8,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def twitter
   # end
 
+
   def google_oauth2
     user = User.from_omniauth(auth)
 
