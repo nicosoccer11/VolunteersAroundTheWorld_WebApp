@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
   
       # Store the user ID in the session to keep them logged in
       session[:user_id] = user.id
-  
       # Check if the user is an admin and redirect accordingly
       if user.is_admin?
         redirect_to admin_dashboard_path, notice: "Successfully signed in as Admin!"
