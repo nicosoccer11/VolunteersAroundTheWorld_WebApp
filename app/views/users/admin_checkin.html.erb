@@ -1,25 +1,80 @@
-<h1>Admin Check-In</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <style>
+    body {
+      background-color: blue;
+      margin: 0;
+      padding: 0;
+    }
 
-<%= form_with url: admin_checkin_path, method: :post, local: true do |f| %>
-    <div class="form-group">
-      <%= f.label :first_name, 'First Name' %>
-      <%= f.text_field :first_name, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group">
-      <%= f.label :last_name, 'Last Name' %>
-      <%= f.text_field :last_name, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group">
-      <%= f.label :email, 'Email' %>
-      <%= f.text_field :email, class: 'form-control' %>
-    </div>
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
 
-    <div class="form-group">
-    <%= f.label :event_id, 'Select Event' %>
-    <%= f.collection_select :event_id, Event.all, :id, :name, { prompt: 'Select an Event' }, { class: 'form-control' } %>
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Add any additional styling as needed */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin User Check-In</h1>
+
+    <%= form_with url: admin_checkin_path, method: :post, local: true do |f| %>
+      <div class="form-group">
+        <%= f.label :first_name, 'First Name' %>
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name, 'Last Name' %>
+        <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email, 'Email' %>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :event_id, 'Select Event' %>
+        <%= f.collection_select :event_id, Event.all, :id, :name, { prompt: 'Select an Event' }, { class: 'form-control' } %>
+      </div>
+
+      <%= f.submit 'Check-In', class: 'btn btn-primary' %>
+    <% end %>
   </div>
-  
-    <%= f.submit 'Check-In', class: 'btn btn-primary' %>
-  <% end %>
+</body>
+</html>
