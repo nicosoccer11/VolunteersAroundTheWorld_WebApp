@@ -11,3 +11,9 @@ User.create(
   email: 'test@tamu.edu',
   isAdmin: true # Set the isAdmin attribute as needed
 )
+User.create(
+  first_name: 'Johnny',
+  last_name: 'Boy',
+  email: 'test2@tamu.edu',
+  isAdmin: false # Set the isAdmin attribute as needed
+)
