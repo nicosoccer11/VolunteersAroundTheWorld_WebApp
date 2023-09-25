@@ -14,10 +14,11 @@ class UsersController < ApplicationController
     
     def checkin
       @events = Event.all 
-  
+      @test = current_user
       if request.post?
         event = Event.find(params[:event_id])
-        EventsUser.create(user_id: 5, event_id: params[:event_id])
+        user = User.find_by(email: $current_user_email)
+        EventsUser.create(user_id: user.id, event_id: params[:event_id])
         redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
 
       end
