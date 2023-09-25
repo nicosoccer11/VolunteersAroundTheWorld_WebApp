@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
   
   def is_admin?
-    self.admin
+    self.isAdmin
   end
 
   def self.from_omniauth(auth)

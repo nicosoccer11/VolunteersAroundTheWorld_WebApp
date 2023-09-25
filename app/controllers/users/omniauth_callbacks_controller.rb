@@ -16,6 +16,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_out_all_scopes
       flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
       sign_in_and_redirect user, event: :authentication
+      puts "SETTING EMAIL right nowNOW"
+      $current_user_email = auth.info.email
       tempUser = User.find_by(email: user.email)
       if tempUser
         puts "User already exists"
