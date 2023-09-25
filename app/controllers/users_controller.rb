@@ -18,20 +18,28 @@ class UsersController < ApplicationController
     end
 
     def admin_checkin
-      # Extract user_id and event_id from the form parameters
-      user_id = params[:user_id]
-      event_id = params[:event_id]
+      puts "inside function"
+      if request.post?
+        puts "test"
+        # This block will execute when the form is submitted
+        
+        # Extract user_id and event_id from the form parameters
+        user_id = params[:admin_checkin][:user_id]
+        event_id = params[:admin_checkin][:event_id]
     
-      # Add logic to create a record in the join table
-      if user_id.present? && event_id.present?
-        EventsUser.create(user_id: user_id, event_id: event_id)
-        flash[:notice] = 'User checked in successfully.'
+        # Add logic to create a record in the join table
+        if user_id.present? && event_id.present?
+          EventsUser.create(user_id: user_id, event_id: event_id)
+          flash[:notice] = 'User checked in successfully.'
+          redirect_to admin_dashboard_path # Redirect after form submission
+        else
+          flash[:alert] = 'Please select a user and an event.'
+        end
       else
-        flash[:alert] = 'Please select a user and an event.'
+        
       end
-    
-      #redirect_to admin_dashboard_path
     end
+    
   
     private
   
