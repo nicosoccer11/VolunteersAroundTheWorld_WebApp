@@ -2,10 +2,26 @@ class UsersController < ApplicationController
     #before_action :ensure_admin, only: [:admin_dashboard, :grant_admin]
     def home
     end
+    
     def admin_dashboard
       @users = User.all
+      @events = Event.all
+    end
+
+    def user_dashboard
+      @events = Event.all
     end
     
+    def checkin
+      @events = Event.all 
+  
+      if request.post?
+        event = Event.find(params[:event_id])
+        current_user.events << event 
+        redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
+
+      end
+    end
 
     def add_admin
       email = params[:email]
