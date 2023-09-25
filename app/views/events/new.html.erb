@@ -1,18 +1,86 @@
-<h1>Create a New Event</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <style>
+    body {
+      background-color: #f1efee;
+      margin: 0;
+      padding: 0;
+    }
 
-<%= form_with(model: @event, url: events_path, method: :post) do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_field :date %>
-  </div>
+    h1, form {
+      margin-bottom: 20px; /* Add spacing between the form sections */
+    }
 
-  <div class="actions">
-    <%= form.submit "Create Event" %>
+    .field {
+      margin-bottom: 10px; /* Add spacing between form fields */
+      margin-right: 10px;
+    }
+
+    label {
+      display: block; /* Make labels appear on a new line */
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%; /* Make text and date fields full-width */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .actions {
+      text-align: center; /* Center-align the submit button */
+    }
+
+    .submit-button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px; /* Add spacing above the link */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Create a New Event</h1>
+
+    <%= form_with(model: @event, url: events_path, method: :post) do |form| %>
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :date %>
+        <%= form.date_field :date %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Create Event", class: "submit-button" %>
+      </div>
+    <% end %>
+
+    <div class="back-link">
+      <%= link_to "Back to Admin Dashboard", admin_dashboard_path %>
+    </div>
   </div>
-  <%= link_to "Back to Admin Dashboard", admin_dashboard_path%>
-<% end %>
+</body>
+</html>

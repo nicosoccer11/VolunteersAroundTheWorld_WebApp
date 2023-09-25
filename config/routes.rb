@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'user_checkin', to: 'users#user_checkin', as: 'user_checkin'
   post 'admin_checkin', to: 'users#admin_checkin'
   post 'user_checkin', to: 'users#checkin'
+  post 'add_admin', to: 'users#add_admin', as: 'admin_add_admin'
   get '/users/home', to: 'users#home', as: 'users_home'
   get '/events/index', to: 'events#index', as: 'events_index'
   get '/events/new', to: 'events#new', as: 'events_new'
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
     collection do
       put :grant_admin
     end
+    post 'add_admin', on: :collection
   end
 
   # Events routes

@@ -158,10 +158,10 @@
 <div class="horizontal-container">
     <!-- Form to grant admin status by email -->
     <div class="section">
-        <%= form_with url: grant_admin_users_path, method: :put, local: true do |f| %>
-            <%= f.label :email, "Grant Admin Status to:" %>
-            <%= f.text_field :email %>
-            <%= f.submit "Add Admin" %>
+        <%= form_with(url: add_admin_users_path, method: :post, local: true) do |f| %>
+          <%= f.label :email, "Enter Email:" %>
+          <%= f.text_field :email %>
+          <%= f.submit "Grant Admin Status" %>
         <% end %>
 
         <!-- Current Admins Section -->
