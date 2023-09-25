@@ -15,6 +15,35 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_out_all_scopes
       flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
       sign_in_and_redirect user, event: :authentication
+      tempUser = User.find_by(email: user.email)
+      puts "THIS IS THE USER FOUND BY EMAIL ( #{user.email}): #{tempUser}"
+
+      if tempUser
+        puts "User already exists"
+      else 
+        # HERE IS WHERE YOU NEED TO ADD THE NEW USER
+        puts "ADDING NEW USER"
+        newUser = User.create(
+            first_name: auth.info.first_name,
+            last_name: auth.info.last_name,
+            email: auth.info.email,
+            isAdmin: false,
+            provider: auth.provider,
+            uid: auth.uid,
+            avatar_url: auth.info.avatar_url
+          )
+        puts "#{newUsers}"
+        if newUser.persisted?
+          # New user created successfully, sign them in
+          flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
+          sign_in_and_redirect newUser, event: :authentication
+        else
+          # Failed to create a new user
+          flash[:alert] = 'Failed to create a new user.'
+        end
+        tempUser = User.find_by(email: user.email)
+        puts "THIS IS THE USER FOUND BY EMAIL PT2: #{tempUser}"
+      end
     else
       flash[:alert] =
         t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized."
