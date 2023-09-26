@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# The EventsController is responsible for managing events within the application.
+# It provides actions to list events, create new events, and delete existing events.
 class EventsController < ApplicationController
   def index
     @events = Event.all
