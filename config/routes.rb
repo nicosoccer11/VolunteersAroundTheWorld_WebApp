@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # Root route
   root 'users#home'
@@ -29,5 +31,5 @@ Rails.application.routes.draw do
   end
 
   # Events routes
-  resources :events, only: [:index, :new, :create, :destroy]
+  resources :events, only: %i[index new create destroy]
 end

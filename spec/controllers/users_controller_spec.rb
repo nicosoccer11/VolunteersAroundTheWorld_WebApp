@@ -1,20 +1,27 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe 'Admin Check-In', type: :feature do
+RSpec.describe UsersController, type: :controller do
+  describe 'POST #add_admin' do
+    it 'grants admin status to a user' do
+      user = User.create(first_name: 'John', last_name: 'Doe', email: 'test@example.com', isAdmin: false,
+                         password: 'password')
 
-  it 'allows an admin to check in a user' do
-    visit admin_checkin_path
+      # Simulate a POST request to the add_admin endpoint
+      post :add_admin, params: { email: user.email }
 
-    # Fill in the form fields
-    fill_in 'First Name', with: 'John'
-    fill_in 'Last Name', with: 'Doe'
-    fill_in 'Email', with: 'test@tamu.edu'
+      # Check if the user's isAdmin attribute is updated to true
+      user.reload
+      expect(user.isAdmin).to be true
+    end
 
-    # Select an event from the dropdown by its visible texts
-    select("Test Event", from: "Select Event").select_option
+    it 'handles non-existent user gracefully' do
+      # Simulate a POST request with an email of a non-existent user
+      post :add_admin, params: { email: 'nonexistent@example.com' }
 
-    click_button 'Check-In'
-
-    expect(page).to have_content('User checked in successfully.')
+      expect(response).to have_http_status(:redirect)
+      expect(flash[:alert]).to be_present
+    end
   end
 end

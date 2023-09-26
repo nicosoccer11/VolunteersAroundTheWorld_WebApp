@@ -16,14 +16,7 @@
         <%= value %>
       </div>
     <% end %>
-    <% if current_user %>
-      <%= link_to "Sign out", signout_path %>
     
-    <% end %>
-
-    <% if current_user&.is_admin? %>
-      <%= link_to "Admin Dashboard", admin_dashboard_user_path(current_user) %>
-    <% end %>
 
     <%= yield %>
   </body>

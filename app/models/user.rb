@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_many :events_users
   has_many :events, through: :events_users
-  
+
   devise :omniauthable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, omniauth_providers: [:google_oauth2]
 
@@ -13,12 +15,12 @@ class User < ApplicationRecord
       user.avatar_url = auth.info.image # assuming the user model has an image
     end
   end
-  
+
   def is_admin?
-    self.admin
+    isAdmin
   end
 
   def self.from_omniauth(auth)
-    where(email: auth["info"]["email"]).first_or_create
+    where(email: auth['info']['email']).first_or_create
   end
 end
