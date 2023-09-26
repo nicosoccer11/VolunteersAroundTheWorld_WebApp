@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <style>
+    body {
+      background-color: #f1efee;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc; /* Add grey border to separate events */
+      padding: 10px; /* Add padding to the list items for spacing */
+    }
+
+    .event-name {
+      flex: 1;
+    }
+
+    .event-date {
+      margin-left: 10px;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>All Events</h1>
+    <ul>
+      <% @events.each do |event| %>
+        <li>
+          <span class="event-name"><%= event.name %></span>
+          <span class="event-date"><%= event.date %></span>
+        </li>
+      <% end %>
+    </ul>
+    <div class="back-link">
+      <%= link_to "Back to Admin Dashboard", admin_dashboard_path %>
+    </div>
+  </div>
+</body>
+</html>

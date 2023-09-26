@@ -27,5 +27,12 @@
 
 /public/assets
 
+/volunteers-around-the-world
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.env
+.env
+.env
+
+/config/credentials.yml.enc
