@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# The SessionsController manages user authentication and sessions within the application.
+# It handles user sign-in and sign-out using OmniAuth-based authentication.
 class SessionsController < ApplicationController
   def create
     # Extract the auth information from the callback
