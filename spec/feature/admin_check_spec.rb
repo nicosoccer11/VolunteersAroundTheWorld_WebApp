@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.feature 'Admin Check-In', type: :feature do
   scenario 'admin checks in a user' do
     # Create any necessary data (e.g., user, event) in the database
-    user = User.create(
+    User.create(
       first_name: 'John',
       last_name: 'Doe',
       email: 'john.doe@example.com',
-      isAdmin: true,  # Assuming this user is an admin
-      password: 'password'  # Assuming you have password authentication
+      isAdmin: true, # Assuming this user is an admin
+      password: 'password' # Assuming you have password authentication
     )
 
-    event = Event.create(
+    Event.create(
       name: 'Test Event',
       date: Date.today
     )
@@ -29,12 +31,11 @@ RSpec.feature 'Admin Check-In', type: :feature do
     click_button 'Check-In'
 
     # Add assertions to check for expected behavior
-    expect(page).to have_content('User checked in successfully')  # Replace with your flash message
-
+    expect(page).to have_content('User checked in successfully') # Replace with your flash message
   end
 
   scenario 'admin checks in a non-existant user' do
-    user = User.create(
+    User.create(
       first_name: 'no',
       last_name: 'Doe',
       email: 'fake@example.com',
@@ -42,7 +43,7 @@ RSpec.feature 'Admin Check-In', type: :feature do
       password: 'password'
     )
 
-    event = Event.create(
+    Event.create(
       name: 'Test Event',
       date: Date.today
     )
@@ -61,6 +62,5 @@ RSpec.feature 'Admin Check-In', type: :feature do
 
     # Add assertions to check for expected behavior
     expect(page).to have_content('No user found with the specified first name, last name, and email.')  # Replace with your flash message
-
   end
 end
