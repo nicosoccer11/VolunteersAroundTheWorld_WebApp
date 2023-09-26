@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateEventsUsers < ActiveRecord::Migration[6.1]
   def change
     create_table :events_users, id: false do |t|
@@ -5,6 +7,6 @@ class CreateEventsUsers < ActiveRecord::Migration[6.1]
       t.references :user, null: false, foreign_key: true
     end
 
-    add_index :events_users, [:event_id, :user_id], unique: true
+    add_index :events_users, %i[event_id user_id], unique: true
   end
 end
