@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f1efee;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .delete-form {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        
+        header {
+          width: 100vw; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 40px;
+          position: relative; 
+      }
+
+        h1 {
+          color: #333;
+          text-align: center;
+          font-weight: bold;
+          color: black;
+      }
+
+      .logout-button {
+        background-color: #f44336;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 40px; 
+        transform: translateY(-50%);
+    }
+
+        .logout-button:hover {
+            background-color: #d32f2f;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1;
+        }
+
+        .horizontal-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .checkin-section {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .add-event-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+      }
+      
+      .events-section {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+
+        .events-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .event-list {
+            margin-top: 10px;
+        }
+
+        .event-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        button, input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Admin Dashboard</h1>
+    <%= link_to "Log Out", users_home_path, class: "logout-button" %>
+</header>
+
+<div class="horizontal-container">
+    <!-- Form to grant admin status by email -->
+    <div class="section">
+        <%= form_with(url: add_admin_users_path, method: :post, local: true) do |f| %>
+          <%= f.label :email, "Enter Email:" %>
+          <%= f.text_field :email %>
+          <%= f.submit "Grant Admin Status" %>
+        <% end %>
+
+        <!-- Current Admins Section -->
+        <h2>Current Admins</h2>
+        <table>
+            <tbody>
+            <% if @users.any? { |user| user.isAdmin? } %>
+                <% @users.each do |user| %>
+                    <% if user.isAdmin? %>
+                        <tr>
+                            <td><%= user.email %></td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            <% else %>
+                <tr>
+                    <td>There aren't any current admins.</td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Manually Check-In a User Section -->
+    <div class="section checkin-section">
+        <h3>
+        <%= link_to "Manually Check-In User", admin_checkin_path %></h3>
+    </div>
+
+
+    <!-- Upcoming Events Section -->
+    <div class="section events-section">
+        <h2>Upcoming Events</h2>
+        <!-- Add Event button -->
+        <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+        <div class="event-list">
+            <% @events.each do |event| %> 
+                <div class="event-item">
+                <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
+
+                <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
+                    <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
+                  <% end %>
+                  
+
+
+                    
+                    <div class="dropdown">
+                        <button>View Checked-In Users</button>
+                        <div class="dropdown-content">
+                            <% event.users.each do |user| %> 
+                                <a href="#"><%= user.first_name + " " + user.last_name %></a> 
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    
+
+</body>
+</html>

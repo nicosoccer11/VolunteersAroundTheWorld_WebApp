@@ -1,0 +1,39 @@
+<style>
+  body {
+    background-color: #f1efee;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 300px; 
+    text-align: center;
+  }
+
+  .google-btn {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+<div class="container">
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= form_for "Login",
+        url: omniauth_authorize_path(resource_name, provider), 
+        method: :post,
+        data: {turbo: "false"} do |f| %>
+          <%= f.submit "Login", type: "image", src: url_for("/assets/btn_google_signin_light_normal_web.png"), class: "google-btn" %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
