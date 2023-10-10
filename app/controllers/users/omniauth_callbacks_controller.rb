@@ -17,8 +17,10 @@ module Users
         flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
         sign_in_and_redirect user, event: :authentication
         tempUser = User.find_by(email: user.email)
+        session[:user_email] = auth.info.email
         if tempUser
           puts 'User already exists'
+          session[:user_email] = auth.info.email
         else
           
           session[:new_user] = true
@@ -70,6 +72,7 @@ module Users
     end
 
     def after_sign_in_path_for(resource_or_scope)
+      puts "BEING REDIRECTED"
       stored_location_for(resource_or_scope) || user_dashboard_path
     end
 

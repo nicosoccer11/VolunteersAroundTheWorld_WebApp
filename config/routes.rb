@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   get 'profile_setup', to: 'users#profile_setup'
   post 'create_profile', to: 'users#create_profile'
 
+  get 'users/events_attended', to: 'users#events_attended', as: 'events_attended'
+
+  get '/logout', to: 'sessions#logout_google', as: :logout_google
+
   # Users routes
   resources :users do
     collection do
@@ -34,5 +38,5 @@ Rails.application.routes.draw do
   end
 
   # Events routes
-  resources :events, only: %i[index new create destroy]
+  resources :events, only: %i[index show new create destroy]
 end

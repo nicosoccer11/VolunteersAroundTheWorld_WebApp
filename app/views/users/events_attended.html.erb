@@ -1,0 +1,11 @@
+
+<h2>Events Attended</h2>
+
+<ul>
+  <% @attended_events.each do |event| %>
+    <li>
+      <%= link_to event.name, event_path(event) %>  <!-- Link to the event's details page -->
+      <!-- Add other event details here -->
+    </li>
+  <% end %>
+</ul>

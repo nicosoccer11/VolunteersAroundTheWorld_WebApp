@@ -80,6 +80,13 @@ class UsersController < ApplicationController
     redirect_to user_dashboard_path
   end
 
+  def events_attended
+    puts "HERE COMES THE SESSION EMAIL"
+    puts "#{session[:user_email]}"
+    @user = User.find_by(email: session[:user_email])
+    @attended_events = @user.events.includes(:users)
+  end
+
   # def ensure_admin
   #   unless current_user&.is_admin?
   #     redirect_to root_path, alert: "You are not authorized to access this page."
