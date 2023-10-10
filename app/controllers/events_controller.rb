@@ -21,6 +21,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event = Event.find(params[:id])
+    # You can add any logic related to displaying an individual event here.
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy

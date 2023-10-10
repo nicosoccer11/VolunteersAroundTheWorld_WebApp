@@ -5,6 +5,15 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
+    
+  def current_user_name
+    user_email = session[:user_email]
+    user = User.find_by(email: user_email)
+    user.present? ? user.first_name + " " + user.last_name : 'Unknown User'
+  end
+  helper_method :current_user_name
+
+
   private
 
   def current_user
