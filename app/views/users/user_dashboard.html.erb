@@ -96,7 +96,7 @@
 <body>
 <header>
     <h1>User Dashboard</h1>
-    <%= link_to "Log Out", users_home_path, class: "logout-button" %>
+    <%= link_to 'Logout', root_path, class: "logout-button"  %>
 </header>
 
 <div class="section">
@@ -117,6 +117,9 @@
         <% end %>
     </div>
 </div>
-
+<div class="section">
+    <h2>Events Attended</h2>
+    <%= link_to "View Events Attended", events_attended_path, class: "view-events-button" %>
+</div>
 </body>
 </html>

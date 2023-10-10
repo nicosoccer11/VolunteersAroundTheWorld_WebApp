@@ -20,11 +20,28 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
-    # Clear the user ID from the session to log them out
-    session[:user_id] = nil
-
-    # Redirect to the main page with a success message
-    redirect_to root_path, notice: 'Successfully signed out!'
+  def logout_google
+      # Revoke the Google OAuth token
+      revoke_google_oauth_token
+  
+      # Redirect to the homepage or a logged-out page
+      redirect_to root_path, notice: 'Logged out of Google successfully'
   end
+
+  def revoke_google_oauth_token
+    return unless session[:user_email].present?
+  
+    # Get the user's Google OAuth token from your session or database
+    user_email = session[:user_email]
+    user = User.find_by(email: user_email)
+  
+    if user && user.google_oauth_token.present?
+      # Revoke the token using OmniAuth's built-in method
+      user.update(google_oauth_token: nil) # Clear the token from your user model
+    end
+  
+    # Clear any session data
+    session.delete(:user_email)
+  end
+
 end
