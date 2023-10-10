@@ -14,10 +14,34 @@
       padding: 20px;
       border-radius: 10px;
       margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 80vh;
     }
 
     h1 {
-      margin: 20px 0;
+      margin-bottom: 20px;
+    }
+
+    .split-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .split-container > * {
+      flex: 1;
+      padding: 10px;
+      max-width: 50%;
+    }
+
+    .list-container {
+      max-height: 80%; /* Set a maximum height for the list container */
+      overflow-y: auto; /* Add vertical scroll if content exceeds max height */
+      border-radius: 10px; /* Add rounded borders */
+      border: 1px solid #ccc; /* Add border */
+      margin: 5px;
+      background-color: #f1efee;
     }
 
     ul {
@@ -27,11 +51,12 @@
     }
 
     li {
-      margin-bottom: 10px;
+      margin: 5px;
       display: flex;
       align-items: center;
       border: 1px solid #ccc;
       padding: 10px;
+      background-color: white;
     }
 
     .event-name {
@@ -39,26 +64,27 @@
     }
 
     .event-date {
-      margin-left: 10px;
+      flex-shrink: 0;
+      width: 80px;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     /* .simple-calendar styles */
     .simple-calendar {
-      /* CSS styles for simple_calendar go here */
-      background-color: #eee;
+      background-color: #f1efee;
       border: 1px solid #ccc;
-      padding: 5px;
-      display: flex;
-      flex-wrap: wrap; /* Wrap elements to the next line if necessary */
-      justify-content: space-between; /* Space the days evenly */
-      margin: 5px;
+      padding: 1px;
+      display: inline-block;
+      margin: 1px;
+      width: 100%;
+      max-width: 100%;
     }
 
-    .simple-calendar .day {
-      flex: 1; /* Each day takes equal width to span the full container */
-      min-width: calc(100% / 7); /* Minimum width for each day (for a week) */
-      box-sizing: border-box; /* Ensure padding and border don't affect width */
-      text-align: center; /* Center align the content */
+    .simple-calendar .day.has-events {
+      background-color: white; /* Set the background color for days with events to white */
     }
 
     .simple-calendar .wday-0 {}
@@ -80,38 +106,52 @@
     .simple-calendar .current-month {}
 
     .simple-calendar .has-events {}
-
-    /* Calendar navigation buttons */
-    .calendar-nav {
-      width: 100%; /* Take the full width */
-      padding: 5px; /* Add padding for spacing */
-      box-sizing: border-box; /* Ensure padding doesn't affect width */
-    }
   </style>
+
 </head>
 <body>
   <div class="container">
     <h1>All Events</h1>
-    <ul>
-      <% @events.each do |event| %>
-        <li>
-          <span class="event-name"><%= event.name %></span>
-          <span class="event-date"><%= event.date %></span>
-        </li>
-      <% end %>
-    </ul>
-    <!-- Calendar navigation buttons -->
-    <div class="calendar-nav">
-      <%= month_calendar events: @events do |date, events| %>
-        <div class="simple-calendar">
-          <%= date %>
-          <% events.each do |event| %>
-            <div>
-              <%= event.name %>
-            </div>
+    <div class="split-container">
+      <div class="list-container">
+        <strong>Upcoming Events</strong>
+        <ul>
+          <% @events.each do |event| %>
+            <% if event.date >= Date.today %>
+              <li>
+                <span class="event-name"><%= event.name %></span>
+                <span class="event-date"><%= event.date.strftime('%b %d') %></span> <!-- Shortened date format -->
+              </li>
+            <% end %>
           <% end %>
-        </div>
-      <% end %>
+        </ul>
+      </div>
+      <div class="list-container">
+        <strong>Past Events</strong>
+        <ul>
+          <% @events.each do |event| %>
+            <% if event.date < Date.today %>
+              <li>
+                <span class="event-name"><%= event.name %></span>
+                <span class="event-date"><%= event.date.strftime('%b %d') %></span> <!-- Shortened date format -->
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+      <!-- Month Calendar code here -->
+      <div class="simple-calendar-container">
+        <%= month_calendar events: @events do |date, events| %>
+          <div class="simple-calendar <%= 'has-events' if events.present? %>">
+            <%= date.strftime('%b %d') %> <!-- Shortened date format -->
+            <% events.each do |event| %>
+              <div>
+                <%= event.name %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="back-link">
       <%= link_to "Back to Admin Dashboard", admin_dashboard_path %>
