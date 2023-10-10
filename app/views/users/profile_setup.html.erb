@@ -1,0 +1,18 @@
+<!-- app/views/users/profile_setup.html.erb -->
+<h2>Complete Your Profile</h2>
+
+<%= form_for @user, url: create_profile_path do |f| %>
+  <div class="field">
+  <%= f.label :phone_number, "Phone Number" %>
+  <%= f.text_field :phone_number, placeholder: "xxx-xxx-xxxx", class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :classification_id %>
+    <%= f.select :classification_id, Classification.all.map { |c| [c.name, c.id] }, {}, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Complete Profile' %>
+  </div>
+<% end %>

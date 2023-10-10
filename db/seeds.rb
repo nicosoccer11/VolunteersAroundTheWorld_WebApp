@@ -19,3 +19,9 @@ User.create(
   email: 'test2@tamu.edu',
   isAdmin: false # Set the isAdmin attribute as needed
 )
+Classification.create(name: 'Freshman')
+Classification.create(name: 'Sophomore')
+Classification.create(name: 'Junior')
+Classification.create(name: 'Senior')
+Classification.create(name: 'Super Senior')
+Classification.create(name: 'Grad Student')

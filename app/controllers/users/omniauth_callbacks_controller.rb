@@ -22,6 +22,9 @@ module Users
         if tempUser
           puts 'User already exists'
         else
+          
+          session[:new_user] = true
+          session[:user_email] = auth.info.email
           User.create!(
             first_name: auth.info.first_name,
             last_name: auth.info.last_name,
@@ -30,9 +33,11 @@ module Users
             provider: auth.provider,
             uid: auth.uid,
             avatar_url: auth.info.avatar_url,
-            password: 'password'
+            password: 'password',
+            phone_number: "",
           )
         end
+        after_sign_in_path_for(user)
       else
         flash[:alert] =
           t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized."
