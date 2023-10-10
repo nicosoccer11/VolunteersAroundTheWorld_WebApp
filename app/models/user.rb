@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  belongs_to :classification
   has_many :events_users
   has_many :events, through: :events_users
 
