@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     return unless request.post?
 
     Event.find(params[:event_id])
-    user = User.find_by(email: $current_user_email)
+    user = User.find_by(email: session[:user_email])
     EventsUser.create(user_id: user.id, event_id: params[:event_id])
     redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
   end
@@ -70,10 +70,10 @@ class UsersController < ApplicationController
 
   def create_profile
     user = User.find_by(email: session[:user_email])
-    puts "SUBMITTED IT"
+    
     user.update(phone_number: user_params[:phone_number])
     user.update(classification_id: user_params[:classification_id])
-    puts "#{user_params[:phone_number]}"
+
 
     session[:new_user] = nil
     flash[:success] = 'Profile updated successfully.'
