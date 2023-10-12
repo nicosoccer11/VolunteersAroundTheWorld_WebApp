@@ -14,10 +14,34 @@
       padding: 20px;
       border-radius: 10px;
       margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 80vh;
     }
 
     h1 {
       margin-bottom: 20px;
+    }
+
+    .split-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .split-container > * {
+      flex: 1;
+      padding: 10px;
+      max-width: 50%;
+    }
+
+    .list-container {
+      max-height: 80%; /* Set a maximum height for the list container */
+      overflow-y: auto; /* Add vertical scroll if content exceeds max height */
+      border-radius: 10px; /* Add rounded borders */
+      border: 1px solid #ccc; /* Add border */
+      margin: 5px;
+      background-color: #f1efee;
     }
 
     ul {
@@ -27,11 +51,12 @@
     }
 
     li {
-      margin-bottom: 10px;
+      margin: 5px;
       display: flex;
       align-items: center;
-      border: 1px solid #ccc; /* Add grey border to separate events */
-      padding: 10px; /* Add padding to the list items for spacing */
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: white;
     }
 
     .event-name {
@@ -39,28 +64,95 @@
     }
 
     .event-date {
-      margin-left: 10px;
-    }
-
-    .back-link {
-      display: block;
+      flex-shrink: 0;
+      width: 80px;
       text-align: center;
-      margin-top: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
+    /* .simple-calendar styles */
+    .simple-calendar {
+      background-color: #f1efee;
+      border: 1px solid #ccc;
+      padding: 1px;
+      display: inline-block;
+      margin: 1px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .simple-calendar .day.has-events {
+      background-color: white; /* Set the background color for days with events to white */
+    }
+
+    .simple-calendar .wday-0 {}
+    .simple-calendar .wday-1 {}
+    .simple-calendar .wday-2 {}
+    .simple-calendar .wday-3 {}
+    .simple-calendar .wday-4 {}
+    .simple-calendar .wday-5 {}
+    .simple-calendar .wday-6 {}
+
+    .simple-calendar .today {}
+    .simple-calendar .past {}
+    .simple-calendar .future {}
+
+    .simple-calendar .start-date {}
+
+    .simple-calendar .prev-month {}
+    .simple-calendar .next-month {}
+    .simple-calendar .current-month {}
+
+    .simple-calendar .has-events {}
   </style>
+
 </head>
 <body>
   <div class="container">
     <h1>All Events</h1>
-    <ul>
-      <% @events.each do |event| %>
-        <li>
-          <span class="event-name"><%= event.name %></span>
-          <span class="event-date"><%= event.date %></span>
-        </li>
-      <% end %>
-    </ul>
+    <div class="split-container">
+      <div class="list-container">
+        <strong>Upcoming Events</strong>
+        <ul>
+          <% @events.each do |event| %>
+            <% if event.date >= Date.today %>
+              <li>
+                <span class="event-name"><%= event.name %></span>
+                <span class="event-date"><%= event.date.strftime('%b %d') %></span> <!-- Shortened date format -->
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+      <div class="list-container">
+        <strong>Past Events</strong>
+        <ul>
+          <% @events.each do |event| %>
+            <% if event.date < Date.today %>
+              <li>
+                <span class="event-name"><%= event.name %></span>
+                <span class="event-date"><%= event.date.strftime('%b %d') %></span> <!-- Shortened date format -->
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+      <!-- Month Calendar code here -->
+      <div class="simple-calendar-container">
+        <%= month_calendar events: @events do |date, events| %>
+          <div class="simple-calendar <%= 'has-events' if events.present? %>">
+            <%= date.strftime('%b %d') %> <!-- Shortened date format -->
+            <% events.each do |event| %>
+              <div>
+                <%= event.name %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
     <div class="back-link">
       <%= link_to "Back to Admin Dashboard", admin_dashboard_path %>
     </div>
