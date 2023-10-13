@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2023_10_09_114530) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_10_030355) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "classifications", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -21,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_09_114530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "hasCountdown"
+    t.datetime "start_time"
   end
 
   create_table "events_users", id: false, force: :cascade do |t|
@@ -46,54 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_09_114530) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  add_foreign_key "events_users", "events"
-  add_foreign_key "events_users", "users"
-=======
-ActiveRecord::Schema[7.0].define(version: 2023_10_10_030355) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "classifications", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.date "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "start_time"
-  end
-
-  create_table "events_users", id: false, force: :cascade do |t|
-    t.bigint "event_id", null: false
-    t.bigint "user_id", null: false
-    t.index ["event_id", "user_id"], name: "index_events_users_on_event_id_and_user_id", unique: true
-    t.index ["event_id"], name: "index_events_users_on_event_id"
-    t.index ["user_id"], name: "index_events_users_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.boolean "isAdmin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "full_name"
-    t.string "uid"
-    t.string "avatar_url"
-    t.string "provider"
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
     t.bigint "classification_id", default: 1
     t.string "phone_number"
     t.index ["classification_id"], name: "index_users_on_classification_id"
@@ -104,5 +62,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_030355) do
   add_foreign_key "events_users", "events"
   add_foreign_key "events_users", "users"
   add_foreign_key "users", "classifications"
->>>>>>> e0040a09a078848cb075caac909ea8337c3de406
 end
