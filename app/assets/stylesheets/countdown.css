@@ -1,0 +1,43 @@
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .days,
+  .hours,
+  .minutes {
+    font-size: 2.5em;
+    margin: 0 10px; /* Adjust the margin as needed */
+    color: white; /* Set the text color to white */
+    font-weight: bold; /* Optionally, set the text to bold */
+  }
+  
+  .days::after,
+  .hours::after {
+    content: ':';
+  }
+  
+  /* Optionally, you can style the text and the container background */
+  .days,
+  .hours,
+  .minutes {
+    background-color: rgba(0, 0, 0, 0.1); /* Background color for the spans */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border style */
+    padding: 10px; /* Adjust the padding as needed */
+    border-radius: 5px; /* Adjust the border radius as needed */
+  }
+  
+  /* Optionally, style the labels (days, hours, minutes) */
+  .days-label,
+  .hours-label,
+  .minutes-label {
+    text-transform: uppercase;
+    color: white; /* Set the text color to white */
+    font-weight: bold; /* Optionally, set the text to bold */
+    font-size: 0.8em; /* Adjust font size as needed */
+    text-align: center; /* Center align the labels */
+    margin: 5px 0; /* Adjust the margin as needed */
+  }
+  

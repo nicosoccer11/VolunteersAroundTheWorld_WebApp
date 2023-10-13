@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%= stylesheet_link_tag 'application', 'events' %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
@@ -196,20 +197,19 @@
     <!-- Upcoming Events Section -->
     <div class="section events-section">
         <h2>Upcoming Events</h2>
-        <!-- Add Event button -->
-        <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+        <div class="event-buttons">
+            <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+            <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-final-countdown-button" %>
+        </div>
         <div class="event-list">
             <% @events.each do |event| %> 
-                <div class="event-item">
-                <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
-
-                <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
-                    <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
-                  <% end %>
-                  
-
-
-                    
+                <div class="event-item <%= 'final-countdown-event' if event.hasCountdown %>">
+                    <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
+    
+                    <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
+                        <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+    
                     <div class="dropdown">
                         <button>View Checked-In Users</button>
                         <div class="dropdown-content">
@@ -222,6 +222,7 @@
             <% end %>
         </div>
     </div>
+    
     
 
 </body>

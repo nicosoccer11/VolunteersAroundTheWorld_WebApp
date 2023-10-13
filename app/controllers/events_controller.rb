@@ -8,16 +8,42 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
+    @event = Event.new(hasCountdown: false)
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(event_params.merge(hasCountdown: false))
 
     if @event.save
       redirect_to events_path, notice: 'Event created successfully.'
     else
       render :new
+    end
+  end
+
+  def new_final_countdown
+    # Check if a final countdown event for the current year already exists
+    if Event.exists?(hasCountdown: true, date: Date.current.beginning_of_year..Date.current.end_of_year)
+      redirect_to events_path, alert: 'A final countdown event for this year already exists.'
+      return
+    end
+
+    @event = Event.new(hasCountdown: true)
+  end
+
+  def create_final_countdown
+    # Check if a final countdown event for the current year already exists
+    if Event.exists?(hasCountdown: true, date: Date.current.beginning_of_year..Date.current.end_of_year)
+      redirect_to events_path, alert: 'A final countdown event for this year already exists.'
+      return
+    end
+
+    @event = Event.new(event_params.merge(hasCountdown: true))
+
+    if @event.save
+      redirect_to events_path, notice: 'Final Countdown Event created successfully.'
+    else
+      render :new_final_countdown
     end
   end
 
