@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
   def add_admin
     email = params[:email]
-    user = User.find_by(email:)
+    user = User.find_by(email: email)
 
     if user
       user.update(isAdmin: true)
@@ -70,9 +70,15 @@ class UsersController < ApplicationController
 
   def create_profile
     user = User.find_by(email: session[:user_email])
+
+    if user
+      user.update(phone_number: user_params[:phone_number])
+      user.update(classification_id: user_params[:classification_id])
+    else
+      flash[:failure] = 'Could not find user'
+    end
     
-    user.update(phone_number: user_params[:phone_number])
-    user.update(classification_id: user_params[:classification_id])
+    
 
 
     session[:new_user] = nil
