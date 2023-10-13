@@ -22,6 +22,13 @@ Rails.application.routes.draw do
   get '/events/index', to: 'events#index', as: 'events_index'
   get '/events/new', to: 'events#new', as: 'events_new'
 
+  get 'profile_setup', to: 'users#profile_setup'
+  post 'create_profile', to: 'users#create_profile'
+
+  get 'users/events_attended', to: 'users#events_attended', as: 'events_attended'
+
+  get '/logout', to: 'sessions#logout_google', as: :logout_google
+
   # Users routes
   resources :users do
     collection do
@@ -31,9 +38,13 @@ Rails.application.routes.draw do
   end
 
   # Events routes
+<<<<<<< HEAD
   resources :events, only: %i[index new create destroy]
 
   # Routes for Final Countdown Event
   get 'events/new_final_countdown', to: 'events#new_final_countdown', as: 'new_final_countdown_event'
   post 'events/create_final_countdown', to: 'events#create_final_countdown', as: 'create_final_countdown_event'
+=======
+  resources :events, only: %i[index show new create destroy]
+>>>>>>> e0040a09a078848cb075caac909ea8337c3de406
 end

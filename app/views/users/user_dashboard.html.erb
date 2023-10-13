@@ -96,7 +96,7 @@
 <body>
 <header>
     <h1>User Dashboard</h1>
-    <%= link_to "Log Out", users_home_path, class: "logout-button" %>
+    <%= link_to 'Logout', root_path, class: "logout-button"  %>
 </header>
 
 <div class="section">
@@ -117,6 +117,7 @@
         <% end %>
     </div>
 </div>
+<<<<<<< HEAD
 
 <div class="countdown" data-final-countdown-date="<%= @final_countdown_date %>">
   <span class="days"></span> days
@@ -125,5 +126,11 @@
 </div>
 
 <%= javascript_include_tag 'countdown' %>
+=======
+<div class="section">
+    <h2>Events Attended</h2>
+    <%= link_to "View Events Attended", events_attended_path, class: "view-events-button" %>
+</div>
+>>>>>>> e0040a09a078848cb075caac909ea8337c3de406
 </body>
 </html>

@@ -1,0 +1,1317 @@
+Inspecting 136 files
+.............................CCCCCCCCCCCCCCCCCCCCCCCCCCCWWWWWWWWCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC....................................
+
+Offenses:
+
+class_demo_10.7_rubocop/Gemfile:1:1: C: Layout/EndOfLine: Carriage return character detected.
+source "https://rubygems.org" ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+source "https://rubygems.org"
+^
+class_demo_10.7_rubocop/Gemfile:1:8: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+source "https://rubygems.org"
+       ^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:4:1: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+#ruby "3.2.1"
+^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:5:6: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ruby "3.1.2"
+     ^^^^^^^
+class_demo_10.7_rubocop/Gemfile:8:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "rails", "~> 7.0.3"
+    ^^^^^^^
+class_demo_10.7_rubocop/Gemfile:8:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "rails", "~> 7.0.3"
+             ^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:11:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "sprockets-rails"
+    ^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:14:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "pg", "~> 1.1"
+    ^^^^
+class_demo_10.7_rubocop/Gemfile:14:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "pg", "~> 1.1"
+          ^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:26:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "puma", "~> 5.0"
+    ^^^^^^
+class_demo_10.7_rubocop/Gemfile:26:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "puma", "~> 5.0"
+            ^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:29:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "importmap-rails"
+    ^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:32:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "turbo-rails"
+    ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:35:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "stimulus-rails"
+    ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:38:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "jbuilder"
+    ^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:52:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+    ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:55:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "bootsnap", '>=1.4.4', require: false
+    ^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:59:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+gem "sassc-rails"
+    ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:66:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+      ^^^^^^^
+class_demo_10.7_rubocop/Gemfile:67:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw ]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:73:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "web-console"
+      ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:84:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "capybara"
+      ^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:85:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "selenium-webdriver"
+      ^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Gemfile:86:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "webdrivers"
+      ^^^^^^^^^^^^
+class_demo_10.7_rubocop/Rakefile:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Add your own tasks in files placed in lib/tasks ending in .rake, ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/Rakefile:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+^
+class_demo_10.7_rubocop/Rakefile:4:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "config/application"
+                 ^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/channels/application_cable/channel.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+module ApplicationCable ...
+^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/channels/application_cable/channel.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module ApplicationCable
+^
+class_demo_10.7_rubocop/app/channels/application_cable/connection.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+module ApplicationCable ...
+^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/channels/application_cable/connection.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module ApplicationCable
+^
+class_demo_10.7_rubocop/app/controllers/application_controller.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class ApplicationController < ActionController::Base ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/application_controller.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class ApplicationController < ActionController::Base
+^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class CommentsController < ApplicationController ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class CommentsController < ApplicationController
+^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:2:40: C: [Correctable] Layout/SpaceInsidePercentLiteralDelimiters: Do not use spaces inside percent literal delimiters.
+  before_action :set_comment, only: %i[ show edit update destroy ]
+                                       ^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:2:65: C: [Correctable] Layout/SpaceInsidePercentLiteralDelimiters: Do not use spaces inside percent literal delimiters.
+  before_action :set_comment, only: %i[ show edit update destroy ]
+                                                                ^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:10:3: C: [Correctable] Style/EmptyMethod: Put empty method definitions on a single line.
+  def show ...
+  ^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:19:3: C: [Correctable] Style/EmptyMethod: Put empty method definitions on a single line.
+  def edit ...
+  ^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:28:53: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to @comment, notice: "Comment was successfully created." }
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:42:53: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to @comment, notice: "Comment was successfully updated." }
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:55:55: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      format.html { redirect_to comments_url, notice: "Comment was successfully destroyed." }
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:60:3: C: [Correctable] Layout/EmptyLinesAroundAccessModifier: Keep a blank line before and after private.
+  private
+  ^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:62:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def set_comment
+^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:62:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def set_comment ...
+    ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:67:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def comment_params
+^^^^
+class_demo_10.7_rubocop/app/controllers/comments_controller.rb:67:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def comment_params ...
+    ^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class PostsController < ApplicationController ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class PostsController < ApplicationController
+^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:10:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #@numposts = @posts.count
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:12:5: C: [Correctable] Style/ConditionalAssignment: Use the return of the conditional for variable assignment and comparison.
+    @posts.count > 0 ? @nummessage=@posts.count : @nummessage=0
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:12:5: C: [Correctable] Style/NumericPredicate: Use @posts.count.positive? instead of @posts.count > 0.
+    @posts.count > 0 ? @nummessage=@posts.count : @nummessage=0
+    ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:12:35: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator =.
+    @posts.count > 0 ? @nummessage=@posts.count : @nummessage=0
+                                  ^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:12:62: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator =.
+    @posts.count > 0 ? @nummessage=@posts.count : @nummessage=0
+                                                             ^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:13:1: C: [Correctable] Layout/EmptyLinesAroundMethodBody: Extra empty line detected at method body end.
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:19:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#    @unreviewed_posts = Post.where('last_reviewed_at IS NULL OR last_reviewed_at > ?', Time.now)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:22:3: C: [Correctable] Style/EmptyMethod: Put empty method definitions on a single line.
+  def show ...
+  ^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:31:3: C: [Correctable] Style/EmptyMethod: Put empty method definitions on a single line.
+  def edit ...
+  ^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:40:50: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to @post, notice: "Post was successfully created." }
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:53:50: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to @post, notice: "Post was successfully updated." }
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:66:52: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:71:3: C: [Correctable] Layout/EmptyLinesAroundAccessModifier: Keep a blank line before and after private.
+  private
+  ^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:73:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def set_post
+^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:73:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def set_post ...
+    ^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:78:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def post_params
+^^^^
+class_demo_10.7_rubocop/app/controllers/posts_controller.rb:78:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def post_params ...
+    ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class UsersController < ApplicationController ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class UsersController < ApplicationController
+^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:10:3: C: [Correctable] Style/EmptyMethod: Put empty method definitions on a single line.
+  def show ...
+  ^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:19:3: C: [Correctable] Style/EmptyMethod: Put empty method definitions on a single line.
+  def edit ...
+  ^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:28:50: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to @user, notice: "User was successfully created." }
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:41:50: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        format.html { redirect_to @user, notice: "User was successfully updated." }
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:54:52: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:59:3: C: [Correctable] Layout/EmptyLinesAroundAccessModifier: Keep a blank line before and after private.
+  private
+  ^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:61:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def set_user
+^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:61:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def set_user ...
+    ^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:66:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def user_params
+^^^^
+class_demo_10.7_rubocop/app/controllers/users_controller.rb:66:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def user_params ...
+    ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/helpers/application_helper.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+module ApplicationHelper ...
+^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/helpers/application_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module ApplicationHelper
+^
+class_demo_10.7_rubocop/app/helpers/comments_helper.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+module CommentsHelper ...
+^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/helpers/comments_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module CommentsHelper
+^
+class_demo_10.7_rubocop/app/helpers/posts_helper.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+module PostsHelper ...
+^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/helpers/posts_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module PostsHelper
+^
+class_demo_10.7_rubocop/app/helpers/users_helper.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+module UsersHelper ...
+^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/helpers/users_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module UsersHelper
+^
+class_demo_10.7_rubocop/app/jobs/application_job.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class ApplicationJob < ActiveJob::Base ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/jobs/application_job.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class ApplicationJob < ActiveJob::Base
+^
+class_demo_10.7_rubocop/app/mailers/application_mailer.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class ApplicationMailer < ActionMailer::Base ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/mailers/application_mailer.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class ApplicationMailer < ActionMailer::Base
+^
+class_demo_10.7_rubocop/app/models/application_record.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class ApplicationRecord < ActiveRecord::Base ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/application_record.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class ApplicationRecord < ActiveRecord::Base
+^
+class_demo_10.7_rubocop/app/models/comment.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class Comment < ApplicationRecord ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/comment.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class Comment < ApplicationRecord
+^
+class_demo_10.7_rubocop/app/models/comment.rb:3:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#  belongs_to :user
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/post.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class Post < ApplicationRecord ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/post.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class Post < ApplicationRecord
+^
+class_demo_10.7_rubocop/app/models/post.rb:9:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#  belongs_to :user
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/user.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class User < ApplicationRecord ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/user.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class User < ApplicationRecord
+^
+class_demo_10.7_rubocop/app/models/user.rb:3:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#  has_many :comments
+^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/models/user.rb:6:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+class_demo_10.7_rubocop/app/views/comments/_comment.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.extract! comment, :id, :post_id, :body, :created_at, :updated_at ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/comments/_comment.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.extract! comment, :id, :post_id, :body, :created_at, :updated_at
+^
+class_demo_10.7_rubocop/app/views/comments/index.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.array! @comments, partial: "comments/comment", as: :comment ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/comments/index.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.array! @comments, partial: "comments/comment", as: :comment
+^
+class_demo_10.7_rubocop/app/views/comments/index.json.jbuilder:1:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.array! @comments, partial: "comments/comment", as: :comment
+                                ^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/comments/show.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.partial! "comments/comment", comment: @comment ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/comments/show.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.partial! "comments/comment", comment: @comment
+^
+class_demo_10.7_rubocop/app/views/comments/show.json.jbuilder:1:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.partial! "comments/comment", comment: @comment
+              ^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/posts/_post.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.extract! post, :id, :title, :body, :created_at, :updated_at ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/posts/_post.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.extract! post, :id, :title, :body, :created_at, :updated_at
+^
+class_demo_10.7_rubocop/app/views/posts/index.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.array! @posts, partial: "posts/post", as: :post ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/posts/index.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.array! @posts, partial: "posts/post", as: :post
+^
+class_demo_10.7_rubocop/app/views/posts/index.json.jbuilder:1:30: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.array! @posts, partial: "posts/post", as: :post
+                             ^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/posts/show.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.partial! "posts/post", post: @post ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/posts/show.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.partial! "posts/post", post: @post
+^
+class_demo_10.7_rubocop/app/views/posts/show.json.jbuilder:1:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.partial! "posts/post", post: @post
+              ^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/users/_user.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.extract! user, :id, :first_name, :last_name, :created_at, :updated_at ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/users/_user.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.extract! user, :id, :first_name, :last_name, :created_at, :updated_at
+^
+class_demo_10.7_rubocop/app/views/users/index.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.array! @users, partial: "users/user", as: :user ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/users/index.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.array! @users, partial: "users/user", as: :user
+^
+class_demo_10.7_rubocop/app/views/users/index.json.jbuilder:1:30: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.array! @users, partial: "users/user", as: :user
+                             ^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/users/show.json.jbuilder:1:1: C: Layout/EndOfLine: Carriage return character detected.
+json.partial! "users/user", user: @user ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/app/views/users/show.json.jbuilder:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+json.partial! "users/user", user: @user
+^
+class_demo_10.7_rubocop/app/views/users/show.json.jbuilder:1:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.partial! "users/user", user: @user
+              ^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:1:1: W: Lint/ScriptPermission: Script file bundle doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:11:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rubygems"
+        ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:17:22: C: [Correctable] Style/SpecialGlobalVars: Prefer $PROGRAM_NAME over $0.
+    File.expand_path($0) == File.expand_path(__FILE__)
+                     ^^
+class_demo_10.7_rubocop/bin/bundle:21:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    ENV["BUNDLER_VERSION"]
+        ^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:26:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return unless "update".start_with?(ARGV.first || " ") # must be running `bundle update`
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:26:19: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    return unless "update".start_with?(ARGV.first || " ") # must be running `bundle update`
+                  ^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:26:54: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    return unless "update".start_with?(ARGV.first || " ") # must be running `bundle update`
+                                                     ^^^
+class_demo_10.7_rubocop/bin/bundle:30:7: C: [Correctable] Style/IfUnlessModifier: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+      if update_index && update_index.succ == i && a =~ Gem::Version::ANCHORED_VERSION_PATTERN
+      ^^
+class_demo_10.7_rubocop/bin/bundle:33:7: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+      next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:34:25: C: [Correctable] Style/PerlBackrefs: Prefer Regexp.last_match(1) over $1.
+      bundler_version = $1
+                        ^^
+class_demo_10.7_rubocop/bin/bundle:41:19: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    gemfile = ENV["BUNDLE_GEMFILE"]
+                  ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:44:10: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../Gemfile', __dir__) instead of expand_path('../../Gemfile', __FILE__).
+    File.expand_path("../../Gemfile", __FILE__)
+         ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:44:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    File.expand_path("../../Gemfile", __FILE__)
+                     ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:50:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      when "gems.rb" then gemfile.sub(/\.rb$/, gemfile)
+           ^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:57:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return unless File.file?(lockfile)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:59:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return unless lockfile_contents =~ /\n\nBUNDLED WITH\n\s{2,}(#{Gem::Version::VERSION_PATTERN})\n/
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:66:9: C: [Correctable] Layout/MultilineOperationIndentation: Align the operands of an expression in an assignment spanning multiple lines.
+        bundler_requirement_for(lockfile_version)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:76:81: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    return requirement unless Gem::Version.new(Gem::VERSION) < Gem::Version.new("2.7.0")
+                                                                                ^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:78:20: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    requirement += ".a" if bundler_gem_version.prerelease?
+                   ^^^^
+class_demo_10.7_rubocop/bin/bundle:84:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    ENV["BUNDLE_GEMFILE"] ||= gemfile
+        ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:91:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      gem "bundler", bundler_requirement
+          ^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:93:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return if gem_error.nil?
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:95:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      require "bundler/version"
+              ^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:97:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return if require_error.nil? && Gem::Requirement.new(bundler_requirement).satisfied_by?(Gem::Version.new(Bundler::VERSION))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:112:1: C: [Correctable] Style/IfUnlessModifier: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+if m.invoked_as_script?
+^^
+class_demo_10.7_rubocop/bin/bundle:113:21: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  load Gem.bin_path("bundler", "bundle")
+                    ^^^^^^^^^
+class_demo_10.7_rubocop/bin/bundle:113:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  load Gem.bin_path("bundler", "bundle")
+                               ^^^^^^^^
+class_demo_10.7_rubocop/bin/rails:1:1: W: Lint/ScriptPermission: Script file rails doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/rails:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/rails:2:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+APP_PATH = File.expand_path("../config/application", __dir__)
+                            ^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/rails:3:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "../config/boot"
+                 ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/rails:4:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rails/commands"
+        ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/rake:1:1: W: Lint/ScriptPermission: Script file rake doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/rake:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/rake:2:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "../config/boot"
+                 ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/rake:3:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rake"
+        ^^^^^^
+class_demo_10.7_rubocop/bin/setup:1:1: W: Lint/ScriptPermission: Script file setup doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/setup:2:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "fileutils"
+        ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:5:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+APP_ROOT = File.expand_path("..", __dir__)
+                            ^^^^
+class_demo_10.7_rubocop/bin/setup:16:8: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "== Installing dependencies =="
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:17:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system! "gem install bundler --conservative"
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:18:10: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system("bundle check") || system!("bundle install")
+         ^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:18:37: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system("bundle check") || system!("bundle install")
+                                    ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:26:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system! "bin/rails db:prepare"
+          ^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:29:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system! "bin/rails log:clear tmp:clear"
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/setup:32:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system! "bin/rails restart"
+          ^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:1:1: W: Lint/ScriptPermission: Script file spring doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/spring:2:31: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+if !defined?(Spring) && [nil, "development", "test"].include?(ENV["RAILS_ENV"])
+                              ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:2:46: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+if !defined?(Spring) && [nil, "development", "test"].include?(ENV["RAILS_ENV"])
+                                             ^^^^^^
+class_demo_10.7_rubocop/bin/spring:2:67: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+if !defined?(Spring) && [nil, "development", "test"].include?(ENV["RAILS_ENV"])
+                                                                  ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:3:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "bundler"
+      ^^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:4:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  require "bundler"
+          ^^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:7:58: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  Bundler.locked_gems&.specs&.find { |spec| spec.name == "spring" }&.tap do |spring|
+                                                         ^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:9:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    gem "spring", spring.version
+        ^^^^^^^^
+class_demo_10.7_rubocop/bin/spring:10:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    require "spring/binstub"
+            ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:1:1: W: Lint/ScriptPermission: Script file webpack doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/webpack:3:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+    ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:3:26: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                         ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:3:41: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                                        ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:4:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+    ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:4:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+                     ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:6:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "pathname"
+        ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:7:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+    ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:7:44: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+                                           ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:8:3: C: [Correctable] Layout/ArgumentAlignment: Align the arguments of a method call if they span more than one line.
+  Pathname.new(__FILE__).realpath)
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:10:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bundler/setup"
+        ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:12:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker"
+        ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:13:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker/webpack_runner"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack:15:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+APP_ROOT = File.expand_path("..", __dir__)
+                            ^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:1:1: W: Lint/ScriptPermission: Script file webpack-dev-server doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/webpack-dev-server:3:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+    ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:3:26: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                         ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:3:41: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                                        ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:4:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+    ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:4:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+                     ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:6:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "pathname"
+        ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:7:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+    ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:7:44: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+                                           ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:8:3: C: [Correctable] Layout/ArgumentAlignment: Align the arguments of a method call if they span more than one line.
+  Pathname.new(__FILE__).realpath)
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:10:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bundler/setup"
+        ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:12:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker"
+        ^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:13:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker/dev_server_runner"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/webpack-dev-server:15:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+APP_ROOT = File.expand_path("..", __dir__)
+                            ^^^^
+class_demo_10.7_rubocop/bin/yarn:1:1: W: Lint/ScriptPermission: Script file yarn doesn't have execute permission.
+#!/usr/bin/env ruby
+^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+class_demo_10.7_rubocop/bin/yarn:4:10: C: [Correctable] Style/InverseMethods: Use reject instead of inverting select.
+  yarn = ENV["PATH"].split(File::PATH_SEPARATOR). ...
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:4:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  yarn = ENV["PATH"].split(File::PATH_SEPARATOR).
+             ^^^^^^
+class_demo_10.7_rubocop/bin/yarn:4:49: C: [Correctable] Layout/DotPosition: Place the . on the next line, together with the method name.
+  yarn = ENV["PATH"].split(File::PATH_SEPARATOR).
+                                                ^
+class_demo_10.7_rubocop/bin/yarn:5:5: C: [Correctable] Layout/MultilineMethodCallIndentation: Align select with ENV["PATH"].split(File::PATH_SEPARATOR). on line 4.
+    select { |dir| File.expand_path(dir) != __dir__ }.
+    ^^^^^^
+class_demo_10.7_rubocop/bin/yarn:5:54: C: [Correctable] Layout/DotPosition: Place the . on the next line, together with the method name.
+    select { |dir| File.expand_path(dir) != __dir__ }.
+                                                     ^
+class_demo_10.7_rubocop/bin/yarn:6:5: C: [Correctable] Layout/MultilineMethodCallIndentation: Align product with ENV["PATH"].split(File::PATH_SEPARATOR). on line 4.
+    product(["yarn", "yarn.cmd", "yarn.ps1"]).
+    ^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:6:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    product(["yarn", "yarn.cmd", "yarn.ps1"]).
+             ^^^^^^
+class_demo_10.7_rubocop/bin/yarn:6:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    product(["yarn", "yarn.cmd", "yarn.ps1"]).
+                     ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:6:34: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    product(["yarn", "yarn.cmd", "yarn.ps1"]).
+                                 ^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:6:46: C: [Correctable] Layout/DotPosition: Place the . on the next line, together with the method name.
+    product(["yarn", "yarn.cmd", "yarn.ps1"]).
+                                             ^
+class_demo_10.7_rubocop/bin/yarn:7:5: C: [Correctable] Layout/MultilineMethodCallIndentation: Align map with ENV["PATH"].split(File::PATH_SEPARATOR). on line 4.
+    map { |dir, file| File.expand_path(file, dir) }.
+    ^^^
+class_demo_10.7_rubocop/bin/yarn:7:52: C: [Correctable] Layout/DotPosition: Place the . on the next line, together with the method name.
+    map { |dir, file| File.expand_path(file, dir) }.
+                                                   ^
+class_demo_10.7_rubocop/bin/yarn:8:5: C: [Correctable] Layout/MultilineMethodCallIndentation: Align find with ENV["PATH"].split(File::PATH_SEPARATOR). on line 4.
+    find { |file| File.executable?(file) }
+    ^^^^
+class_demo_10.7_rubocop/bin/yarn:13:5: C: [Correctable] Style/StderrPuts: Use warn instead of $stderr.puts to allow such output to be disabled.
+    $stderr.puts "Yarn executable was not detected in the system."
+    ^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:13:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    $stderr.puts "Yarn executable was not detected in the system."
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:14:5: C: [Correctable] Style/StderrPuts: Use warn instead of $stderr.puts to allow such output to be disabled.
+    $stderr.puts "Download Yarn at https://yarnpkg.com/en/docs/install"
+    ^^^^^^^^^^^^
+class_demo_10.7_rubocop/bin/yarn:14:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    $stderr.puts "Download Yarn at https://yarnpkg.com/en/docs/install"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config.ru:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# This file is used by Rack-based servers to start the application. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config.ru:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# This file is used by Rack-based servers to start the application.
+^
+class_demo_10.7_rubocop/config.ru:3:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "config/environment"
+                 ^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require_relative "boot" ...
+^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require_relative "boot"
+^
+class_demo_10.7_rubocop/config/application.rb:1:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "boot"
+                 ^^^^^^
+class_demo_10.7_rubocop/config/application.rb:3:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rails"
+        ^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:5:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_model/railtie"
+        ^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:6:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_job/railtie"
+        ^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:7:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_record/railtie"
+        ^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:8:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_storage/engine"
+        ^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:9:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "action_controller/railtie"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:10:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "action_mailer/railtie"
+        ^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:11:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "action_mailbox/engine"
+        ^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:12:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "action_text/engine"
+        ^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:13:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "action_view/railtie"
+        ^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:14:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "action_cable/engine"
+        ^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/application.rb:15:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "sprockets/railtie"
+        ^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/boot.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__) ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/boot.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+^
+class_demo_10.7_rubocop/config/boot.rb:3:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bundler/setup" # Set up gems listed in the Gemfile.
+        ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/boot.rb:4:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bootsnap/setup" # Speed up boot time by caching expensive operations.
+        ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environment.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Load the Rails application. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environment.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Load the Rails application.
+^
+class_demo_10.7_rubocop/config/environment.rb:2:18: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require_relative "application"
+                 ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/development.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require "active_support/core_ext/integer/time" ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/development.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require "active_support/core_ext/integer/time"
+^
+class_demo_10.7_rubocop/config/environments/development.rb:1:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_support/core_ext/integer/time"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/development.rb:22:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  if Rails.root.join("tmp/caching-dev.txt").exist?
+                     ^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/development.rb:28:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/production.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require "active_support/core_ext/integer/time" ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/production.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require "active_support/core_ext/integer/time"
+^
+class_demo_10.7_rubocop/config/environments/production.rb:1:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_support/core_ext/integer/time"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/production.rb:56:22: C: [Correctable] Layout/SpaceInsideArrayLiteralBrackets: Do not use space inside array brackets.
+  config.log_tags = [ :request_id ]
+                     ^
+class_demo_10.7_rubocop/config/environments/production.rb:56:34: C: Layout/SpaceInsideArrayLiteralBrackets: Do not use space inside array brackets.
+  config.log_tags = [ :request_id ]
+                                 ^
+class_demo_10.7_rubocop/config/environments/production.rb:91:10: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+         ^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/production.rb:92:50: C: [Correctable] Style/GlobalStdStream: Use $stdout instead of STDOUT.
+    logger           = ActiveSupport::Logger.new(STDOUT)
+                                                 ^^^^^^
+class_demo_10.7_rubocop/config/environments/test.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require "active_support/core_ext/integer/time" ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/environments/test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require "active_support/core_ext/integer/time"
+^
+class_demo_10.7_rubocop/config/environments/test.rb:1:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "active_support/core_ext/integer/time"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/application_controller_renderer.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/application_controller_renderer.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/assets.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/assets.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/backtrace_silencers.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/backtrace_silencers.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/backtrace_silencers.rb:8:50: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+Rails.backtrace_cleaner.remove_silencers! if ENV["BACKTRACE"]
+                                                 ^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/content_security_policy.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/content_security_policy.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/cookies_serializer.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/cookies_serializer.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/filter_parameter_logging.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/filter_parameter_logging.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/filter_parameter_logging.rb:4:47: C: [Correctable] Style/SymbolArray: Use %i or %I for an array of symbols.
+Rails.application.config.filter_parameters += [ ...
+                                              ^
+class_demo_10.7_rubocop/config/initializers/inflections.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/inflections.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/mime_types.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/mime_types.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/initializers/permissions_policy.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Define an application-wide HTTP permissions policy. For further ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/permissions_policy.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Define an application-wide HTTP permissions policy. For further
+^
+class_demo_10.7_rubocop/config/initializers/wrap_parameters.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Be sure to restart your server when you modify this file. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/initializers/wrap_parameters.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Be sure to restart your server when you modify this file.
+^
+class_demo_10.7_rubocop/config/puma.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# Puma can serve each request in a thread from an internal thread pool. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# Puma can serve each request in a thread from an internal thread pool.
+^
+class_demo_10.7_rubocop/config/puma.rb:7:25: C: [Correctable] Style/RedundantFetchBlock: Use fetch("RAILS_MAX_THREADS", 5) instead of fetch("RAILS_MAX_THREADS") { 5 }.
+max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:7:31: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+                              ^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:8:31: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
+                              ^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:14:34: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+                                 ^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:14:47: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+                                              ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:14:65: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+                                                                ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:18:10: C: [Correctable] Style/RedundantFetchBlock: Use fetch("PORT", 3000) instead of fetch("PORT") { 3000 }.
+port ENV.fetch("PORT") { 3000 }
+         ^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:18:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+port ENV.fetch("PORT") { 3000 }
+               ^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:22:23: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+environment ENV.fetch("RAILS_ENV") { "development" }
+                      ^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:22:38: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+environment ENV.fetch("RAILS_ENV") { "development" }
+                                     ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:25:19: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+                  ^^^^^^^^^
+class_demo_10.7_rubocop/config/puma.rb:25:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+                               ^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/routes.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+Rails.application.routes.draw do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/routes.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+Rails.application.routes.draw do
+^
+class_demo_10.7_rubocop/config/routes.rb:2:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  root to: "posts#index"
+           ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/routes.rb:8:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+class_demo_10.7_rubocop/config/spring.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+Spring.watch( ...
+^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/spring.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+Spring.watch(
+^
+class_demo_10.7_rubocop/config/spring.rb:2:3: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  ".ruby-version",
+  ^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/spring.rb:3:3: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  ".rbenv-vars",
+  ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/spring.rb:4:3: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  "tmp/restart.txt",
+  ^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/config/spring.rb:5:3: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  "tmp/caching-dev.txt"
+  ^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210124165602_create_posts.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class CreatePosts < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210124165602_create_posts.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class CreatePosts < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210124165650_create_comments.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class CreateComments < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210124165650_create_comments.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class CreateComments < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210125003928_create_users.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class CreateUsers < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210125003928_create_users.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class CreateUsers < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210125004012_add_userid_to_posts.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class AddUseridToPosts < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210125004012_add_userid_to_posts.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class AddUseridToPosts < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210125004012_add_userid_to_posts.rb:3:39: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    add_reference :posts, :user, index:true, foreign_key: true
+                                      ^
+class_demo_10.7_rubocop/db/migrate/20210125004104_add_userid_to_comments.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class AddUseridToComments < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210125004104_add_userid_to_comments.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class AddUseridToComments < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210201222329_add_data_to_posts.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class AddDataToPosts < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210201222329_add_data_to_posts.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class AddDataToPosts < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210209045620_add_phonenumber_to_user.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class AddPhonenumberToUser < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210209045620_add_phonenumber_to_user.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class AddPhonenumberToUser < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/migrate/20210209221138_add_areacode_to_user.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+class AddAreacodeToUser < ActiveRecord::Migration[6.0] ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/migrate/20210209221138_add_areacode_to_user.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class AddAreacodeToUser < ActiveRecord::Migration[6.0]
+^
+class_demo_10.7_rubocop/db/schema.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# This file is auto-generated from the current state of the database. Instead
+^
+class_demo_10.7_rubocop/db/schema.rb:13:43: C: [Correctable] Style/NumericLiterals: Use underscores(_) as thousands separator and separate every 3 digits with them.
+ActiveRecord::Schema[7.0].define(version: 2021_02_09_221138) do
+                                          ^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:15:20: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  enable_extension "plpgsql"
+                   ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:17:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "comments", force: :cascade do |t|
+               ^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:18:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.bigint "post_id", null: false
+             ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:19:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "body"
+           ^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:20:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", null: false
+               ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:21:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", null: false
+               ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:22:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.bigint "user_id"
+             ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:23:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.index ["post_id"], name: "index_comments_on_post_id"
+             ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:23:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.index ["post_id"], name: "index_comments_on_post_id"
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:24:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.index ["user_id"], name: "index_comments_on_user_id"
+             ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:24:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.index ["user_id"], name: "index_comments_on_user_id"
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:27:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "posts", force: :cascade do |t|
+               ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:28:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "title"
+           ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:29:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "body"
+           ^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:30:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", null: false
+               ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:31:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", null: false
+               ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:32:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.bigint "user_id"
+             ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:33:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.integer "views"
+              ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:34:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.integer "clicks"
+              ^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:35:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "last_reviewed_at", precision: nil
+               ^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:36:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.index ["user_id"], name: "index_posts_on_user_id"
+             ^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:36:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.index ["user_id"], name: "index_posts_on_user_id"
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:39:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "users", force: :cascade do |t|
+               ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:40:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "first_name"
+           ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:41:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "last_name"
+           ^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:42:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", null: false
+               ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:43:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", null: false
+               ^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:44:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "phonenumber"
+           ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:45:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "area_code"
+           ^^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:48:19: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  add_foreign_key "comments", "posts"
+                  ^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:48:31: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  add_foreign_key "comments", "posts"
+                              ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:49:19: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  add_foreign_key "comments", "users"
+                  ^^^^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:49:31: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  add_foreign_key "comments", "users"
+                              ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:50:19: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  add_foreign_key "posts", "users"
+                  ^^^^^^^
+class_demo_10.7_rubocop/db/schema.rb:50:28: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  add_foreign_key "posts", "users"
+                           ^^^^^^^
+class_demo_10.7_rubocop/db/seeds.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# This file should contain all the record creation needed to seed the database with its default values. ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/db/seeds.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# This file should contain all the record creation needed to seed the database with its default values.
+^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:3:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+RSpec.describe "CreatingBlogPosts", type: :system do
+               ^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:9:1: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+it 'saves & displays the resulting blog post' do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:11:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  click_on "New Post"
+           ^^^^^^^^^^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:21:21: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  post = Post.order("id").last
+                    ^^^^
+class_demo_10.7_rubocop/spec/integration/creating_blog_posts_spec.rb:26:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+class_demo_10.7_rubocop/spec/rails_helper.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# This file is copied to spec/ when you run 'rails generate rspec:install' ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/rails_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+^
+class_demo_10.7_rubocop/spec/rails_helper.rb:6:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+abort("The Rails environment is running in production mode!") if Rails.env.production?
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/spec_helper.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# This file was generated by the `rails generate rspec:install` command. Conventionally, all ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/spec_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# This file was generated by the `rails generate rspec:install` command. Conventionally, all
+^
+class_demo_10.7_rubocop/spec/spec_helper.rb:49:1: C: [Correctable] Style/BlockComments: Do not use block comments.
+=begin ...
+^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:3:22: C: [Correctable] Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+RSpec.describe User, :type => :model do
+                     ^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:4:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:5:6: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "is valid with values given for first name & last name" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:6:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    user = User.new(first_name: "anything", last_name: "anything")
+                                ^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:6:56: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    user = User.new(first_name: "anything", last_name: "anything")
+                                                       ^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:10:6: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "is not valid without a first_name" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:11:49: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    user = User.new(first_name: nil, last_name: "anything")
+                                                ^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:15:6: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  it "is not valid without a last_name" do
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:16:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    user = User.new(first_name: "anything", last_name: nil)
+                                ^^^^^^^^^^
+class_demo_10.7_rubocop/spec/unit/user_spec.rb:19:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require "rails_helper" ...
+^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require "rails_helper"
+^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:1:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rails_helper"
+        ^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:3:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+feature "User creates user" do
+        ^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:4:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:5:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  scenario "successfully with complete first and last name" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:7:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "New User"
+             ^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:8:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+            ^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:8:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+                                ^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:9:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: "Wade"
+            ^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:9:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: "Wade"
+                               ^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:10:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Create User"
+             ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:15:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  scenario "unsuccessfully with a blank last name" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:17:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "New User"
+             ^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:18:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+            ^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:18:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+                                ^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:19:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: nil
+            ^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:20:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Create User"
+             ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_creates_user_spec.rb:25:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require "rails_helper" ...
+^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require "rails_helper"
+^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:1:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "rails_helper"
+        ^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:3:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+feature "User inputs area code" do
+        ^^^^^^^^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:4:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  scenario "successfully" do
+           ^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:6:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "New User"
+             ^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:7:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+            ^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:7:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+                                ^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:8:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: "Wade"
+            ^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:8:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: "Wade"
+                               ^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:9:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Area Code", with: "979"
+            ^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:9:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Area Code", with: "979"
+                               ^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:10:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Create User"
+             ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:13:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:17:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  scenario "unsuccessfully" do
+           ^^^^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:19:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "New User"
+             ^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:20:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+            ^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:20:33: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "First name", with: "Pauline"
+                                ^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:21:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: "Wade"
+            ^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:21:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Last name", with: "Wade"
+                               ^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:22:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Area Code", with: "abc"
+            ^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:22:32: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    fill_in "Area Code", with: "abc"
+                               ^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:23:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Create User"
+             ^^^^^^^^^^^^^
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:26:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+class_demo_10.7_rubocop/spec_notused/integration/user_inputs_area_code.rb:28:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+
+136 files inspected, 444 offenses detected, 373 offenses autocorrectable

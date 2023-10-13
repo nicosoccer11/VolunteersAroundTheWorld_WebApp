@@ -10,47 +10,45 @@
             font-family: Arial, sans-serif;
             margin: 40px;
             background-color: #f1efee;
-
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .delete-form {
             display: inline-block;
             margin: 0;
             padding: 0;
         }
-        
-        
-        
+
         header {
-          width: 100vw; 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 40px;
-          position: relative; 
-      }
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
 
         h1 {
-          color: #333;
-          text-align: center;
-          font-weight: bold;
-          color: black;
-      }
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
 
-      .logout-button {
-        background-color: #f44336;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        right: 40px; 
-        transform: translateY(-50%);
-    }
+        .logout-button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+        }
 
         .logout-button:hover {
             background-color: #d32f2f;
@@ -80,20 +78,8 @@
             align-items: center;
         }
 
-        .add-event-button {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-      }
-      
-      .events-section {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-      }
-
         .events-section {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -101,13 +87,28 @@
 
         .event-list {
             margin-top: 10px;
+            overflow: hidden;
         }
 
         .event-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 10px;
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        .event-details {
+            flex-grow: 1; /* Allow event details to grow and take up available space */
+            white-space: nowrap; /* Prevent wrapping */
+        }
+
+        /* Style for the "View All Events" button */
+        .view-all-events-button {
+            /* Add any specific styles you want for this button here */
+        }
+
+        /* Style for the "Add Event" button */
+        .add-event-button {
+            /* Add any specific styles you want for this button here */
         }
 
         button, input[type="submit"] {
@@ -147,7 +148,6 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        
     </style>
 </head>
 <body>
@@ -193,23 +193,22 @@
         <%= link_to "Manually Check-In User", admin_checkin_path %></h3>
     </div>
 
-
     <!-- Upcoming Events Section -->
     <div class="section events-section">
-        <h2>Upcoming Events</h2>
-        <div class="event-buttons">
-            <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
-            <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-final-countdown-button" %>
-        </div>
-        <div class="event-list">
-            <% @events.each do |event| %> 
-                <div class="event-item <%= 'final-countdown-event' if event.hasCountdown %>">
+    <h2>Upcoming Events</h2>
+    <div class="event-buttons">
+        <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+        <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-final-countdown-button" %>
+    </div>
+    <div class="event-list">
+        <% @events.each do |event| %>
+            <div class="event-item <%= 'final-countdown-event' if event.hasCountdown %>">
+                <div class="event-details">
                     <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
-    
-                    <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
-                        <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
-                    <% end %>
-    
+                </div>
+                <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
+                    <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
+                <% end %>
                     <div class="dropdown">
                         <button>View Checked-In Users</button>
                         <div class="dropdown-content">
@@ -220,10 +219,28 @@
                     </div>
                 </div>
             <% end %>
-        </div>
+            <!-- "View All Events" button stays where it is -->
+            <div class="event-item">
+                <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
+            </div>
+        <% else %>
+            <p>No upcoming events.</p>
+            <!-- Display "Add Event" and "View All Events" buttons when there are no upcoming events -->
+            <div class="event-item">
+                <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+            </div>
+            <div class="event-item">
+                <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
+            </div>
+        <% end %>
     </div>
+<<<<<<< HEAD
     
     
+=======
+    </div>
+</div>
+>>>>>>> e0040a09a078848cb075caac909ea8337c3de406
 
 </body>
 </html>

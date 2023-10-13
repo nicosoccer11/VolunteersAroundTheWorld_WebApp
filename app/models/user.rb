@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  belongs_to :classification
   has_many :events_users
   has_many :events, through: :events_users
+  has_many :attended_events, through: :events_users, source: :event
+  validates :classification, presence: true
 
   devise :omniauthable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, omniauth_providers: [:google_oauth2]

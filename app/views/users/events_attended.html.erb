@@ -1,0 +1,11 @@
+
+<h2>Events Attended by <%= current_user_name %></h2>
+<ul>
+  <% @attended_events.each do |event| %>
+    <li>
+      <%= link_to event.name, event_path(event) %> 
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Go Back', user_dashboard_path  %>

@@ -36,3 +36,5 @@
 .env
 
 /config/credentials.yml.enc
+
+class_demo_10.7_rubocop/

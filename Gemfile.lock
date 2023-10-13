@@ -74,6 +74,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    brakeman (6.0.1)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -286,6 +287,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_calendar (2.4.3)
+      rails (>= 3.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -336,6 +339,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  brakeman
   capybara
   debug
   devise
@@ -354,6 +358,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   selenium-webdriver
+  simple_calendar (~> 2.0)
   simplecov
   sprockets-rails
   stimulus-rails
