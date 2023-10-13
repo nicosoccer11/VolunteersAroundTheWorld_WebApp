@@ -29,6 +29,7 @@ module Users
             first_name: auth.info.first_name,
             last_name: auth.info.last_name,
             email: auth.info.email,
+            # classification_id: 'Freshman',
             isAdmin: false,
             provider: auth.provider,
             uid: auth.uid,

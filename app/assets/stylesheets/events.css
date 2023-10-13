@@ -1,19 +1,13 @@
-/* Apply common styles to all event items */
 .event-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 10px; /* Add padding to the list items for spacing */
-  border: 1px solid #ccc; /* Add grey border to separate events */
-  /* Add other common styles here */
+  padding: 10px;
+  border: 1px solid #ccc;
 }
   
-/* Apply styles specifically to final countdown events */
 .event-item.final-countdown-event {
-    /* Your styles for final countdown events here */
-    /* Override or add styles as needed to make them visually distinct */
-    background-color: #ea295c; /* Example background color for final countdown events */
-    border-color: #d32976; /* Example border color for final countdown events */
-    /* Add any other specific styles for final countdown events here */
-  }
+    background-color: #dd99ab;
+    border-color: #d32976;
+}

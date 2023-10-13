@@ -26,10 +26,16 @@ class UsersController < ApplicationController
     @test = current_user
     return unless request.post?
 
-    Event.find(params[:event_id])
+    event = Event.find_by(id: params[:event_id]) # Use find_by to avoid raising an exception
     user = User.find_by(email: session[:user_email])
-    EventsUser.create(user_id: user.id, event_id: params[:event_id])
-    redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
+
+    if event
+      EventsUser.create(user_id: user.id, event_id: event.id)
+      redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
+    else
+      flash[:alert] = 'Event not found with the specified ID.'
+      redirect_to user_dashboard_path
+    end
   end
 
   def add_admin
@@ -73,18 +79,12 @@ class UsersController < ApplicationController
     user = User.find_by(email: session[:user_email])
 
     if user
-      user.update(phone_number: user_params[:phone_number])
-      user.update(classification_id: user_params[:classification_id])
+      EventsUser.create(user_id: user.id, event_id: params[:event_id])
+      redirect_to user_dashboard_path
     else
-      flash[:failure] = 'Could not find user'
+      flash[:alert] = 'User not found with the specified email.'
+      redirect_to user_dashboard_path
     end
-    
-    
-
-
-    session[:new_user] = nil
-    flash[:success] = 'Profile updated successfully.'
-    redirect_to user_dashboard_path
   end
 
   def events_attended
@@ -93,12 +93,6 @@ class UsersController < ApplicationController
     @user = User.find_by(email: session[:user_email])
     @attended_events = @user.events.includes(:users)
   end
-
-  # def ensure_admin
-  #   unless current_user&.is_admin?
-  #     redirect_to root_path, alert: "You are not authorized to access this page."
-  #   end
-  # end
 
   private
 

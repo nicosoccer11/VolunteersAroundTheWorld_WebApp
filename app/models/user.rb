@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :events_users
   has_many :events, through: :events_users
   has_many :attended_events, through: :events_users, source: :event
-  validates :classification, presence: true
+  validates :classification, presence: true, on: :update_profile
 
   devise :omniauthable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, omniauth_providers: [:google_oauth2]
