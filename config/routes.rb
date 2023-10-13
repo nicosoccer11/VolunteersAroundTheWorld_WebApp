@@ -38,5 +38,10 @@ Rails.application.routes.draw do
   end
 
   # Events routes
+  resources :events, only: %i[index new create destroy]
+
+  # Routes for Final Countdown Event
+  get 'events/new_final_countdown', to: 'events#new_final_countdown', as: 'new_final_countdown_event'
+  post 'events/create_final_countdown', to: 'events#create_final_countdown', as: 'create_final_countdown_event'
   resources :events, only: %i[index show new create destroy]
 end

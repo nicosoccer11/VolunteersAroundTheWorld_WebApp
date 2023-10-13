@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def user_dashboard
     @events = Event.all
+    @final_countdown_date = Event.find_by(hasCountdown: true)&.date
   end
 
   def redirect_new_users_to_profile_setup
