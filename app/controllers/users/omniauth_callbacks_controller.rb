@@ -16,12 +16,15 @@ module Users
         sign_out_all_scopes
         flash[:success] = t 'devise.omniauth_callbacks.success', kind: 'Google'
         sign_in_and_redirect user, event: :authentication
-        puts 'SETTING EMAIL right nowNOW'
-        $current_user_email = auth.info.email
         tempUser = User.find_by(email: user.email)
+        session[:user_email] = auth.info.email
         if tempUser
           puts 'User already exists'
+          session[:user_email] = auth.info.email
         else
+          
+          session[:new_user] = true
+          session[:user_email] = auth.info.email
           User.create!(
             first_name: auth.info.first_name,
             last_name: auth.info.last_name,
@@ -30,9 +33,11 @@ module Users
             provider: auth.provider,
             uid: auth.uid,
             avatar_url: auth.info.avatar_url,
-            password: 'password'
+            password: 'password',
+            phone_number: "",
           )
         end
+        after_sign_in_path_for(user)
       else
         flash[:alert] =
           t 'devise.omniauth_callbacks.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized."
@@ -67,6 +72,7 @@ module Users
     end
 
     def after_sign_in_path_for(resource_or_scope)
+      puts "BEING REDIRECTED"
       stored_location_for(resource_or_scope) || user_dashboard_path
     end
 

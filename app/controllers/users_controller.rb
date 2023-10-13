@@ -2,6 +2,7 @@
 
 class UsersController < ApplicationController
   # before_action :ensure_admin, only: [:admin_dashboard, :grant_admin]
+  before_action :redirect_new_users_to_profile_setup, only: :user_dashboard
   def home; end
 
   def admin_dashboard
@@ -13,13 +14,19 @@ class UsersController < ApplicationController
     @events = Event.all
   end
 
+  def redirect_new_users_to_profile_setup
+    if session[:new_user]
+      redirect_to profile_setup_path
+    end
+  end
+
   def checkin
     @events = Event.all
     @test = current_user
     return unless request.post?
 
     Event.find(params[:event_id])
-    user = User.find_by(email: $current_user_email)
+    user = User.find_by(email: session[:user_email])
     EventsUser.create(user_id: user.id, event_id: params[:event_id])
     redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
   end
@@ -56,9 +63,39 @@ class UsersController < ApplicationController
     end
   end
 
+  def profile_setup
+    @user = User.new
+    @classifications = Classification.all  # Load classification options here
+  end
+
+  def create_profile
+    user = User.find_by(email: session[:user_email])
+    
+    user.update(phone_number: user_params[:phone_number])
+    user.update(classification_id: user_params[:classification_id])
+
+
+    session[:new_user] = nil
+    flash[:success] = 'Profile updated successfully.'
+    redirect_to user_dashboard_path
+  end
+
+  def events_attended
+    puts "HERE COMES THE SESSION EMAIL"
+    puts "#{session[:user_email]}"
+    @user = User.find_by(email: session[:user_email])
+    @attended_events = @user.events.includes(:users)
+  end
+
   # def ensure_admin
   #   unless current_user&.is_admin?
   #     redirect_to root_path, alert: "You are not authorized to access this page."
   #   end
   # end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:phone_number, :classification_id)
+  end
 end
