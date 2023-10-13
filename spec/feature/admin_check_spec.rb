@@ -4,13 +4,18 @@ require 'rails_helper'
 
 RSpec.feature 'Admin Check-In', type: :feature do
   scenario 'admin checks in a user' do
+    Classification.create(name: 'Freshman')
+    classification_name = 'Freshman'
+    classification = Classification.find_by(name: classification_name)
     # Create any necessary data (e.g., user, event) in the database
     User.create(
       first_name: 'John',
       last_name: 'Doe',
       email: 'john.doe@example.com',
       isAdmin: true, # Assuming this user is an admin
-      password: 'password' # Assuming you have password authentication
+      password: 'password',
+      phone_number: "",
+      classification_id: classification.id
     )
 
     Event.create(
@@ -31,16 +36,21 @@ RSpec.feature 'Admin Check-In', type: :feature do
     click_button 'Check-In'
 
     # Add assertions to check for expected behavior
-    expect(page).to have_content('User checked in successfully') # Replace with your flash message
+    expect(page).to have_content('User checked in successfully') 
   end
 
   scenario 'admin checks in a non-existant user' do
+    Classification.create(name: 'Freshman')
+    classification_name = 'Freshman'
+    classification = Classification.find_by(name: classification_name)
     User.create(
       first_name: 'no',
       last_name: 'Doe',
       email: 'fake@example.com',
       isAdmin: true,
-      password: 'password'
+      password: 'password',
+      phone_number: "",
+      classification_id: classification.id
     )
 
     Event.create(
