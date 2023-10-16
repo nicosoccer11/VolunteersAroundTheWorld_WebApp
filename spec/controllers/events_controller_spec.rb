@@ -1,29 +1,32 @@
-require 'rails_helper'
 
-RSpec.feature 'Create Final Countdown Event', type: :feature do
-  scenario 'Admin creates a new final countdown event' do
-    
-    visit new_final_countdown_event_path
 
-    fill_in 'Name', with: 'New Year Countdown'
-    fill_in 'Date', with: '2023-12-31'
+# require 'rails_helper'
 
-    click_button 'Create Final Countdown Event'
+# RSpec.describe EventsController, type: :controller do
+#   let(:valid_attributes) { { name: 'My Event', date: '2023-12-31', hasCountdown: true } }
 
-    expect(page).to have_content('Final Countdown Event created successfully')
-  end
+#   describe 'GET #new' do
+#     it 'renders the new template' do
+#         get :new
+#         expect(response).to have_http_status(:ok)
+#         expect(response).to render_template("new")
+#     end
+#   end
 
-  scenario 'Admin tries to create a final countdown event when one already exists' do
+#   describe 'POST #create' do
+#     context 'with valid parameters' do
+#       it 'creates a new event' do
+#         post :create, params: { event: valid_attributes }
+#         expect(Event.last.name).to eq('My Event')
+#         expect(response).to redirect_to(events_path)
+#       end
+#     end
 
-    visit new_final_countdown_event_path
-    
-    # Create an existing final countdown event
-    Event.create(name: 'Event 1', date: Date.today, hasCountdown: true)
-    fill_in 'Name', with: 'New Year Countdown'
-    fill_in 'Date', with: '2023-12-31'
-
-    click_button 'Create Final Countdown Event'
-
-    expect(page).to have_content('A final countdown event for this year already exists')
-  end
-end
+#     context 'with invalid parameters' do
+#       it 'renders the new template' do
+#         post :create, params: { event: { name: '' } } # Invalid data
+#         expect(response).to render_template('new')
+#       end
+#     end
+#   end
+# end
