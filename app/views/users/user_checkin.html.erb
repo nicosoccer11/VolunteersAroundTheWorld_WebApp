@@ -67,6 +67,10 @@
             <%= f.label :event_id, 'Select Event' %>
             <%= f.collection_select :event_id, Event.all, :id, :name, prompt: 'Select an Event' %>
         </div>
+        <div class="form-group">
+            <%= f.label :phone_number, 'Verify Phone Number' %>
+            <%= f.text_field :phone_number, class: 'form-control' %>
+        </div>
         <%= f.submit "Check-In" %>
         
     <% end %>
