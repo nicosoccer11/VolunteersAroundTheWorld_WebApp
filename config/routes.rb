@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  get 'custom_logout', to: 'custom_sessions#logout', as: 'custom_logout'
+  devise_scope :user do
+    get 'logout', to: 'devise/sessions#destroy'
+  end
 
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
@@ -29,12 +31,12 @@ Rails.application.routes.draw do
 
   get 'users/events_attended', to: 'users#events_attended', as: 'events_attended'
 
-  get '/logout', to: 'sessions#logout_google', as: :logout_google
-
   # Users routes
-  resources :users do
+  resources :users, except: :show do
     collection do
       put :grant_admin
+      get 'profile_setup'
+      post 'create_profile'
     end
     post 'add_admin', on: :collection
   end
