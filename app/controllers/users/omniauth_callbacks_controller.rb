@@ -2,7 +2,7 @@ module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     def google_oauth2
       user = User.from_omniauth(auth)
-
+      #
       if user.persisted?
         flash[:success] = I18n.t('devise.omniauth_callbacks.success', kind: 'Google')
         sign_in_and_redirect user, event: :authentication
@@ -10,7 +10,7 @@ module Users
         session[:google_data] = user_data_from_auth
         redirect_to profile_setup_path
       end
-    end
+    end 
 
     protected
 
