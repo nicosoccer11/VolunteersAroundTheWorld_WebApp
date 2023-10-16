@@ -5,7 +5,8 @@ module Users
       #
       if user.persisted?
         flash[:success] = I18n.t('devise.omniauth_callbacks.success', kind: 'Google')
-        sign_in_and_redirect user, event: :authentication
+        sign_in user, event: :authentication   
+        redirect_to after_sign_in_path_for(user) 
         tempUser = User.find_by(email: user.email)
         session[:user_email] = auth.info.email
         if tempUser
