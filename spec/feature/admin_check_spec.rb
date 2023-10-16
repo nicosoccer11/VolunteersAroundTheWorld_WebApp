@@ -18,10 +18,19 @@ RSpec.feature 'Admin Check-In', type: :feature do
       classification_id: classification.id
     )
 
-    Event.create(
+    event = Event.create(
       name: 'Test Event',
-      date: Date.today
+      date: Date.today,
+      hasCountdown: false
     )
+    if event.save
+      # Event was successfully created
+      puts "Event was created successfully"
+    else
+      # Event creation failed, check for errors
+      errors = event.errors.full_messages
+      puts "Event creation failed with the following errors: #{errors}"
+    end
 
     # Visit the admin check-in page
     visit admin_checkin_path
@@ -55,7 +64,8 @@ RSpec.feature 'Admin Check-In', type: :feature do
 
     Event.create(
       name: 'Test Event',
-      date: Date.today
+      date: Date.today,
+      hasCountdown: false
     )
 
     # Visit the admin check-in page
