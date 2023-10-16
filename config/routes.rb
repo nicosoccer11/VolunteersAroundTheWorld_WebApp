@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-
+  devise_scope :user do
+    get 'logout', to: 'devise/sessions#destroy'
+  end
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
   get 'user_dashboard', to: 'users#user_dashboard', as: 'user_dashboard'
@@ -27,16 +29,21 @@ Rails.application.routes.draw do
 
   get 'users/events_attended', to: 'users#events_attended', as: 'events_attended'
 
-  get '/logout', to: 'sessions#logout_google', as: :logout_google
-
   # Users routes
-  resources :users do
+  resources :users, except: :show do
     collection do
       put :grant_admin
+      get 'profile_setup'
+      post 'create_profile'
     end
     post 'add_admin', on: :collection
   end
 
   # Events routes
+  resources :events, only: %i[index new create destroy]
+
+  # Routes for Final Countdown Event
+  get 'events/new_final_countdown', to: 'events#new_final_countdown', as: 'new_final_countdown_event'
+  post 'events/create_final_countdown', to: 'events#create_final_countdown', as: 'create_final_countdown_event'
   resources :events, only: %i[index show new create destroy]
 end

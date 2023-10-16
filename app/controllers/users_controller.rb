@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def user_dashboard
     @events = Event.all
+    @final_countdown_date = Event.find_by(hasCountdown: true)&.date
   end
 
   def redirect_new_users_to_profile_setup
@@ -25,15 +26,21 @@ class UsersController < ApplicationController
     @test = current_user
     return unless request.post?
 
-    Event.find(params[:event_id])
+    event = Event.find_by(id: params[:event_id]) # Use find_by to avoid raising an exception
     user = User.find_by(email: session[:user_email])
-    EventsUser.create(user_id: user.id, event_id: params[:event_id])
-    redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
+
+    if event
+      EventsUser.create(user_id: user.id, event_id: event.id)
+      redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
+    else
+      flash[:alert] = 'Event not found with the specified ID.'
+      redirect_to user_dashboard_path
+    end
   end
 
   def add_admin
     email = params[:email]
-    user = User.find_by(email:)
+    user = User.find_by(email: email)
 
     if user
       user.update(isAdmin: true)
@@ -64,21 +71,30 @@ class UsersController < ApplicationController
   end
 
   def profile_setup
+    @google_data = session[:google_data]
     @user = User.new
-    @classifications = Classification.all  # Load classification options here
+    @classifications = Classification.all
   end
 
   def create_profile
-    user = User.find_by(email: session[:user_email])
+    google_data = session.delete(:google_data)
+
+    user = User.new(google_data)
+    user.phone_number = user_params[:phone_number]
+    user.classification_id = user_params[:classification_id]
     
-    user.update(phone_number: user_params[:phone_number])
-    user.update(classification_id: user_params[:classification_id])
-
-
-    session[:new_user] = nil
-    flash[:success] = 'Profile updated successfully.'
-    redirect_to user_dashboard_path
+    if user.save
+      sign_in(user)
+      redirect_to user_dashboard_path, notice: 'Profile created successfully.'
+    else
+      @user = user
+      @classifications = Classification.all
+      flash[:alert] = 'Error creating your profile. Please try again.'
+      render :profile_setup
+    end
   end
+
+  private
 
   def events_attended
     puts "HERE COMES THE SESSION EMAIL"
@@ -87,15 +103,10 @@ class UsersController < ApplicationController
     @attended_events = @user.events.includes(:users)
   end
 
-  # def ensure_admin
-  #   unless current_user&.is_admin?
-  #     redirect_to root_path, alert: "You are not authorized to access this page."
-  #   end
-  # end
-
   private
 
   def user_params
     params.require(:user).permit(:phone_number, :classification_id)
   end
+
 end
