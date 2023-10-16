@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_15_210835) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_10_030355) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_15_210835) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.boolean "isAdmin", default: false
+    t.boolean "isAdmin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "full_name"
@@ -54,14 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_15_210835) do
     t.datetime "remember_created_at"
     t.bigint "classification_id", default: 1
     t.string "phone_number"
-    t.string "major"
-    t.string "google_oauth_token"
-    t.integer "sign_in_count"
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.boolean "is_admin", default: false
     t.index ["classification_id"], name: "index_users_on_classification_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -102,13 +102,9 @@ class UsersController < ApplicationController
     end
   end
 
-  private
-
   def events_attended
-    puts "HERE COMES THE SESSION EMAIL"
-    puts "#{session[:user_email]}"
     @user = User.find_by(email: session[:user_email])
-    @attended_events = @user.events.includes(:users)
+    @attended_events = @user.events
   end
 
   private
