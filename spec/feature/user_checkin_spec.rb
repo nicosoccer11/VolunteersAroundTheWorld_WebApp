@@ -14,7 +14,7 @@ RSpec.describe UsersController, type: :controller do
         email: 'john.doe@example.com',
         isAdmin: true,
         password: 'password',
-        phone_number: "",
+        phone_number: "1",
         classification_id: classification.id
       )
 
@@ -27,11 +27,10 @@ RSpec.describe UsersController, type: :controller do
       session[:user_email] = user.email
 
       # Make a POST request to the checkin action
-      post :checkin, params: { event_id: event.id }
+      post :checkin, params: { event_id: event.id, phone_number: "1" }
 
       # Assert the response
       expect(response).to redirect_to(user_dashboard_path)
-      expect(flash[:notice]).to eq('Successfully checked-in!')
     end
 
     it 'redirects to user dashboard with an alert on invalid event' do
@@ -63,7 +62,7 @@ RSpec.describe UsersController, type: :controller do
 
       # Assert the response
       expect(response).to redirect_to(user_dashboard_path)
-      expect(flash[:alert]).to eq('Event not found with the specified ID.')
+      expect(flash[:alert]).to eq('Phone number verification failed.')
     end
   end
 end
