@@ -21,14 +21,23 @@ class UsersController < ApplicationController
     end
   end
 
+
   def checkin
     @events = Event.all
     @test = current_user
+  
     return unless request.post?
-
-    event = Event.find_by(id: params[:event_id]) # Use find_by to avoid raising an exception
+  
+    event = Event.find_by(id: params[:event_id]) 
     user = User.find_by(email: session[:user_email])
-
+  
+    # Check if phone numbers match
+    if user.phone_number != params[:phone_number]
+      flash[:alert] = 'Phone number verification failed.'
+      redirect_to user_dashboard_path
+      return
+    end
+  
     if event
       EventsUser.create(user_id: user.id, event_id: event.id)
       redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
