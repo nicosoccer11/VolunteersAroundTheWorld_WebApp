@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
   it 'is valid with valid attributes' do
-    event = Event.new(name: 'Event 1', date: Date.today)
+    event = Event.new(name: 'Event 1', date: Date.today, hasCountdown: false)
     expect(event).to be_valid
   end
 
