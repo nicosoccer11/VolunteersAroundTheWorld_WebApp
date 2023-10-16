@@ -80,7 +80,8 @@ jobs:
         path: coverage/
 
     - name: Run Brakeman
-        run: bundle exec brakeman
+      run: |
+        bundle exec brakeman
 
   # rubocop-test:
   #   name: Rubocop
