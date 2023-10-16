@@ -7,11 +7,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
             background-color: #f1efee;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            overflow: auto; /* Allow body to scroll */
         }
 
         .delete-form {
@@ -21,19 +20,23 @@
         }
 
         header {
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
             position: relative;
         }
 
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         h1 {
-            color: #333;
-            text-align: center;
             font-weight: bold;
-            color: black;
+            display: inline-block;
+            width: 100%;
         }
 
         .logout-button {
@@ -45,8 +48,9 @@
             cursor: pointer;
             position: absolute;
             top: 50%;
-            right: 40px;
+            right: 20px;
             transform: translateY(-50%);
+            z-index: 1;
         }
 
         .logout-button:hover {
@@ -100,14 +104,11 @@
             white-space: nowrap; /* Prevent wrapping */
         }
 
-        /* Style for the "View All Events" button */
         .view-all-events-button {
-            /* Add any specific styles you want for this button here */
         }
 
-        /* Style for the "Add Event" button */
         .add-event-button {
-            /* Add any specific styles you want for this button here */
+            margin: 3px;
         }
 
         button, input[type="submit"] {
@@ -152,8 +153,10 @@
 <body>
 
 <header>
-    <h1>Admin Dashboard</h1>
-    <%= link_to "Log Out", users_home_path, class: "logout-button" %>
+    <div class="header-content">
+        <h1>Admin Dashboard</h1>
+        <%= link_to "Log Out", users_home_path, class: "logout-button" %>
+    </div>
 </header>
 
 <div class="horizontal-container">
@@ -194,48 +197,48 @@
 
     <!-- Upcoming Events Section -->
     <div class="section events-section">
-    <h2>Upcoming Events</h2>
-    <div class="event-list">
-        <% upcoming_events = @events.select { |event| event.date.present? && event.date >= Date.today } %>
-        <% if upcoming_events.any? %>
-            <!-- "Add Event" button stays at the top -->
-            <div class="event-item">
-                <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
-            </div>
-            <% upcoming_events.each do |event| %> 
-                <div class="event-item">
-                    <div class="event-details">
-                        <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
-                    </div>
-                    <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
-                        <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
-                    <% end %>
-                    <div class="dropdown">
-                        <button>View Checked-In Users</button>
-                        <div class="dropdown-content">
-                            <% event.users.each do |user| %> 
-                                <a href="#"><%= user.first_name + " " + user.last_name %></a> 
-                            <% end %>
+        <h2>Upcoming Events</h2>
+        <div class="event-buttons">
+            <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+            <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-final-countdown-button" %>
+        </div>
+        <div class="event-list">
+            <% upcoming_events = @events.select { |event| event.date.present? && event.date >= Date.today } %>
+            <% if upcoming_events.any? %>
+                <% upcoming_events.each do |event| %>
+                    <div class="event-item <%= 'final-countdown-event' if event.hasCountdown %>">
+                        <div class="event-details">
+                            <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
+                        </div>
+                        <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
+                            <%= submit_tag 'X', class: 'delete-button', data: { confirm: 'Are you sure?' } %>
+                        <% end %>
+                        <div class="dropdown">
+                            <button>View Checked-In Users</button>
+                            <div class="dropdown-content">
+                                <% event.users.each do |user| %>
+                                    <a href="#"><%= user.first_name + " " + user.last_name %></a>
+                                <% end %>
+                            </div>
                         </div>
                     </div>
+                <% end %>
+                <!-- "View All Events" button stays where it is -->
+                <div class="event-item">
+                    <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
+                </div>
+            <% else %>
+                <p>No upcoming events.</p>
+                <!-- Display "Add Event" and "View All Events" buttons when there are no upcoming events -->
+                <div class="event-item">
+                    <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+                </div>
+                <div class="event-item">
+                    <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
                 </div>
             <% end %>
-            <!-- "View All Events" button stays where it is -->
-            <div class="event-item">
-                <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
-            </div>
-        <% else %>
-            <p>No upcoming events.</p>
-            <!-- Display "Add Event" and "View All Events" buttons when there are no upcoming events -->
-            <div class="event-item">
-                <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
-            </div>
-            <div class="event-item">
-                <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
-            </div>
-        <% end %>
-    </div>
-    </div>
+        </div>
+    </div>    
 </div>
 
 </body>

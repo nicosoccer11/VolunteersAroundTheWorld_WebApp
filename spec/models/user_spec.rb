@@ -4,11 +4,16 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   it 'is valid with valid attributes' do
+    Classification.create(name: 'Freshman')
+    classification_name = 'Freshman'
+    classification = Classification.find_by(name: classification_name)
     user = User.new(
       first_name: 'John',
       last_name: 'Doe',
       email: 'john.doe@example.com',
-      password: 'password'
+      password: 'password',
+      phone_number: "",
+      classification_id: classification.id
     )
     expect(user).to be_valid
   end
