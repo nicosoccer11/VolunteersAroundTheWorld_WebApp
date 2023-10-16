@@ -25,9 +25,15 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    redirect_to root_path, alert: 'You must be logged in to access this page.' unless logged_in?
+    redirect_to users_home_path, alert: 'You must be logged in to access this page.' unless logged_in?
   end
-
+  def after_sign_in_path_for(resource)
+    if resource.isAdmin?
+      admin_dashboard_path
+    else
+      user_dashboard_path
+    end
+  end
   def after_sign_out_path_for(resource_or_scope)
     users_home_path
   end

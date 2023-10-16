@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
     # Store the user ID in the session to keep them logged in
     session[:user_id] = user.id
     # Check if the user is an admin and redirect accordingly
-    if user.is_admin?
-      redirect_to admin_dashboard_path, notice: 'Successfully signed in as Admin!'
+    if resource.isAdmin?
+      admin_dashboard_path
     else
-      redirect_to root_path, notice: 'Successfully signed in!'
+      user_dashboard_path
     end
   end
 
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
       revoke_google_oauth_token
   
       # Redirect to the homepage or a logged-out page
-      redirect_to root_path, notice: 'Logged out of Google successfully'
+      redirect_to users_home_path, notice: 'Logged out of Google successfully'
   end
 
   def revoke_google_oauth_token

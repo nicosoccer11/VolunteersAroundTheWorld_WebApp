@@ -51,9 +51,12 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     # You can add any logic related to displaying an individual event here.
   end
-
   def destroy
     @event = Event.find(params[:id])
+    
+    # Remove all associated entries in events_users before deleting the event
+    @event.users.clear
+    
     @event.destroy
     redirect_to request.referrer || admin_dashboard_path, notice: 'Event was successfully deleted.'
   end
