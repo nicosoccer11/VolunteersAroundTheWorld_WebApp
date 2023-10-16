@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Admin Check-In', type: :feature do
+RSpec.feature 'User Check-In', type: :feature do
     scenario "user inputs phone number and selects classification" do
         # Fill in classification table
         Classification.create(name: 'Freshman')
@@ -13,18 +13,27 @@ RSpec.feature 'Admin Check-In', type: :feature do
         classification = Classification.find_by(name: classification_name)
 
         # Create test user
-        User.create(
+        user = User.create(
             first_name: 'John',
             last_name: 'Doe',
-            email: 'john.doe@example.com',
+            email: 'no_user@signedin.test',
             isAdmin: true, 
             password: 'password',
             phone_number: "",
             classification_id: classification.id
         )
 
+        if user.save
+            puts "User got created correctly"
+            # Event was successfully created
+        else
+            # Event creation failed, check for errors
+            errors = user.errors.full_messages
+            puts "Event creation failed with the following errors: #{errors}"
+        end
+
         # Simulate the user logging in through google oauth
-        page.driver.browser.set_cookie("user_email=john.doe@example.com")
+        page.driver.browser.set_cookie("user_email=no_user@signedin.test")
 
         # Enact actual test
         visit profile_setup_path
@@ -33,6 +42,6 @@ RSpec.feature 'Admin Check-In', type: :feature do
 
         click_button "Complete Profile"
         
-        expect(page).to have_content('Profile updated successfully.')
+        expect(page).to have_content('Profile created successfully.')
     end
 end

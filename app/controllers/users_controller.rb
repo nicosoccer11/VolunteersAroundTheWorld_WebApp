@@ -82,6 +82,13 @@ class UsersController < ApplicationController
     user = User.new(google_data)
     user.phone_number = user_params[:phone_number]
     user.classification_id = user_params[:classification_id]
+    # This part is for testing purposes
+    if user.email.blank?
+      user.email = "new_user@signedin.test"
+    end
+    if user.password.blank?
+      user.password = "test123"
+    end
     
     if user.save
       sign_in(user)
@@ -90,6 +97,7 @@ class UsersController < ApplicationController
       @user = user
       @classifications = Classification.all
       flash[:alert] = 'Error creating your profile. Please try again.'
+      puts user.errors.full_messages
       render :profile_setup
     end
   end
