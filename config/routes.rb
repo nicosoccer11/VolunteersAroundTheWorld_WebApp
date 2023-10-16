@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  get 'custom_logout', to: 'custom_sessions#logout', as: 'custom_logout'
+
   # Admin dashboard route
   get 'admin_dashboard', to: 'users#admin_dashboard', as: 'admin_dashboard'
   get 'user_dashboard', to: 'users#user_dashboard', as: 'user_dashboard'
