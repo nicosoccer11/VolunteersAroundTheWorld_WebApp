@@ -71,27 +71,40 @@ class UsersController < ApplicationController
   end
 
   def profile_setup
+    @google_data = session[:google_data]
     @user = User.new
-    @classifications = Classification.all  # Load classification options here
+    @classifications = Classification.all
   end
 
   def create_profile
-    user = User.find_by(email: session[:user_email])
+    google_data = session.delete(:google_data)
 
-    if user
-      EventsUser.create(user_id: user.id, event_id: params[:event_id])
-      redirect_to user_dashboard_path
+    user = User.new(google_data)
+    user.phone_number = user_params[:phone_number]
+    user.classification_id = user_params[:classification_id]
+    # This part is for testing purposes
+    if user.email.blank?
+      user.email = "new_user@signedin.test"
+    end
+    if user.password.blank?
+      user.password = "test123"
+    end
+    
+    if user.save
+      sign_in(user)
+      redirect_to user_dashboard_path, notice: 'Profile created successfully.'
     else
-      flash[:alert] = 'User not found with the specified email.'
-      redirect_to user_dashboard_path
+      @user = user
+      @classifications = Classification.all
+      flash[:alert] = 'Error creating your profile. Please try again.'
+      puts user.errors.full_messages
+      render :profile_setup
     end
   end
 
   def events_attended
-    puts "HERE COMES THE SESSION EMAIL"
-    puts "#{session[:user_email]}"
     @user = User.find_by(email: session[:user_email])
-    @attended_events = @user.events.includes(:users)
+    @attended_events = @user.events
   end
 
   private
@@ -99,4 +112,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:phone_number, :classification_id)
   end
+
 end

@@ -115,12 +115,16 @@
     <div class="container">
       <div class="split-container">
         <div class="list-container">
-        <h2>Events Attended by <%= current_user_name %></h2>
+          <h2>Events Attended by <%= current_user_name %></h2>
           <ul>
-            <% @attended_events.each do |event| %>
-              <li>
-                <%= link_to event.name, event_path(event) %> 
-              </li>
+            <% if @attended_events.present? %>
+              <% @attended_events.each do |event| %>
+                <li>
+                  <%= link_to event.name, event_path(event) %> 
+                </li>
+              <% end %>
+            <% else %>
+              <li>No attended events found.</li>
             <% end %>
           </ul>
         </div>

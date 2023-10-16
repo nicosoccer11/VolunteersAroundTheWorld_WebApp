@@ -25,8 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_030355) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "hasCountdown"
     t.datetime "start_time"
+    t.boolean "hasCountdown"
   end
 
   create_table "events_users", id: false, force: :cascade do |t|
@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_030355) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.boolean "isAdmin", default: false
+    t.boolean "isAdmin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "full_name"

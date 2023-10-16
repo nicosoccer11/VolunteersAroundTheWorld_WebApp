@@ -18,9 +18,10 @@ RSpec.feature 'Admin Check-In', type: :feature do
       classification_id: classification.id
     )
 
-    Event.create(
+    event = Event.create(
       name: 'Test Event',
-      date: Date.today
+      date: Date.today,
+      hasCountdown: false
     )
 
     # Visit the admin check-in page
@@ -55,7 +56,8 @@ RSpec.feature 'Admin Check-In', type: :feature do
 
     Event.create(
       name: 'Test Event',
-      date: Date.today
+      date: Date.today,
+      hasCountdown: false
     )
 
     # Visit the admin check-in page
