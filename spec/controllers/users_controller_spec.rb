@@ -5,8 +5,11 @@ require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
   describe 'POST #add_admin' do
     it 'grants admin status to a user' do
+      Classification.create(name: 'Freshman')
+      classification_name = 'Freshman'
+      classification = Classification.find_by(name: classification_name)
       user = User.create(first_name: 'John', last_name: 'Doe', email: 'test@example.com', isAdmin: false,
-                         password: 'password')
+                         password: 'password', phone_number: "", classification_id: classification.id)
 
       # Simulate a POST request to the add_admin endpoint
       post :add_admin, params: { email: user.email }
