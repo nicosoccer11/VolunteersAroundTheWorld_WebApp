@@ -43,7 +43,7 @@ module Users
     def auth
       @auth ||= request.env['omniauth.auth']
     end
-
+    #might not need
     def user_data_from_auth
       {
         first_name: auth.info.first_name,
