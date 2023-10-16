@@ -14,18 +14,37 @@ module Users
     #   super
     # end
 
-    # DELETE /resource/sign_out
-    # def destroy
-    #   super
-    # end
-
+    def destroy
+      revoke_google_oauth_token
+      super  # This will handle the regular logout process for Devise
+    end
+      
     def after_sign_out_path_for(_resource_or_scope)
       new_user_session_path
     end
 
-    def after_sign_in_path_for(_resource_or_scope)
-      user_dashboard_path
+    def after_sign_in_path_for(resource)
+      if resource.isAdmin?
+        admin_dashboard_path
+      else
+        user_dashboard_path
+      end
     end
+
+    private
+
+    def revoke_google_oauth_token
+      return unless session[:user_email].present?
+      
+      user_email = session[:user_email]
+      user = User.find_by(email: user_email)
+      if user && user.google_oauth_token.present?
+        user.update(google_oauth_token: nil)
+      end
+      
+      session.delete(:user_email)
+    end
+
     # protected
 
     # If you have extra params to permit, append them to the sanitizer.
