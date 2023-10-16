@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.feature 'User Check-In', type: :feature do
     scenario "user inputs phone number and selects classification" do
         # Fill in classification table
+        Classification.delete_all
         Classification.create(name: 'Freshman')
         Classification.create(name: 'Sophomore')
         Classification.create(name: 'Junior')
@@ -23,14 +24,6 @@ RSpec.feature 'User Check-In', type: :feature do
             classification_id: classification.id
         )
 
-        if user.save
-            puts "User got created correctly"
-            # Event was successfully created
-        else
-            # Event creation failed, check for errors
-            errors = user.errors.full_messages
-            puts "Event creation failed with the following errors: #{errors}"
-        end
 
         # Simulate the user logging in through google oauth
         page.driver.browser.set_cookie("user_email=no_user@signedin.test")
