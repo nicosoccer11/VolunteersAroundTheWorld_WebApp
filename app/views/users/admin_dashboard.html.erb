@@ -148,6 +148,16 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        .user-button {
+            background-color: #500000;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10%;
+        }
     </style>
 </head>
 <body>
@@ -155,8 +165,10 @@
 <header>
     <div class="header-content">
         <h1>Admin Dashboard</h1>
+        <%= link_to "User Dashboard", user_dashboard_path, class: "user-button" %>
         <%= link_to "Log Out", logout_path, class: "logout-button" %>
-        </header>
+    </div>
+</header>
 
 <div class="horizontal-container">
     <!-- Form to grant admin status by email -->

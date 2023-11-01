@@ -100,14 +100,28 @@
             text-align: center;
             padding: 20px;
         }
+
+        .user-button {
+            background-color: #500000;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10%;
+        }
     </style>
 </head>
 <body>
 <header>
     <div class="header-content">
         <h1>User Dashboard</h1>
+        <% if @current_user && @current_user.isAdmin? %>
+            <%= link_to "Admin Dashboard", user_dashboard_path, class: "user-button" %>
+        <% end %>
         <%= link_to "Log Out", logout_path, class: "logout-button" %>
-        </header>
+    </div>
+</header>
 
 <div class="section">
     <h2>Upcoming Events</h2>
