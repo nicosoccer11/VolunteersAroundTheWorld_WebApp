@@ -22,31 +22,22 @@ class EventsController < ApplicationController
   end
 
   def new_final_countdown
-    # Check if a final countdown event for the current year already exists
-    if Event.exists?(hasCountdown: true, date: Date.current.beginning_of_year..Date.current.end_of_year)
-      redirect_to events_path, alert: 'A final countdown event for this year already exists.'
-      return
-    end
-
     @event = Event.new(hasCountdown: true)
   end
-
+  
   def create_final_countdown
-    # Check if a final countdown event for the current year already exists
-    if Event.exists?(hasCountdown: true, date: Date.current.beginning_of_year..Date.current.end_of_year)
-      redirect_to events_path, alert: 'A final countdown event for this year already exists.'
-      return
-    end
-
+    # Delete all prior final countdown events
+    Event.where(hasCountdown: true).destroy_all
+  
     @event = Event.new(event_params.merge(hasCountdown: true))
-
+  
     if @event.save
       redirect_to events_path, notice: 'Final Countdown Event created successfully.'
     else
       render :new_final_countdown
     end
   end
-  
+    
   def show
     @event = Event.find(params[:id])
     # You can add any logic related to displaying an individual event here.
