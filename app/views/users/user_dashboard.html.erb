@@ -114,18 +114,18 @@
     <div class="scrollable-container">
         <div class="event-list">
         <% if @events.present? %>
-            <% @events.each do |event| %> 
-                <div class="event-item">
-                    <div class="event-info">
-                        <span>Event Name: <%= event.name %></span>
-                        <span>Date: <%= event.date.present? ? event.date.strftime('%m/%d/%y') : "Date not set" %></span>
-                    </div>
-                    <%= link_to "Check-In", user_checkin_path, class: "checkin-button" %> 
-                </div>
-            <% end %>
-        <% else %>
-            <p>No upcoming events.</p>
+        <% @events.sort_by(&:date).each do |event| %> 
+          <div class="event-item">
+            <div class="event-info">
+              <span>Event Name: <%= event.name %></span>
+              <span>Date: <%= event.date.present? ? event.date.strftime('%m/%d/%y') : "Date not set" %></span>
+            </div>
+            <%= link_to "Check-In", user_checkin_path, class: "checkin-button" %> 
+          </div>
         <% end %>
+      <% else %>
+        <p>No upcoming events.</p>
+      <% end %>
     </div>
 </div>
 

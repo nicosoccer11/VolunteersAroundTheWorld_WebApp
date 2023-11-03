@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f1efee;
+            background-color: #500000;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,7 +17,11 @@
             align-items: center;
             justify-content: center;
         }
-
+        .logo {
+            width: 20vw; /* This will set the width to 20% of the viewport width */
+            height: auto;
+            margin-bottom: 20px;
+        }
         .container {
             background-color: #fff;
             padding: 30px;
@@ -59,6 +63,8 @@
 </head>
 <body>
     <div class="container">
+        <img src="<%= asset_path 'VOWlogo.jpeg' %>" alt="Volunteers Around The World Logo" class="logo">
+
         <h1>Welcome to Volunteers Around The World</h1>
         <%= link_to "Log in", new_user_session_path, class: "user-login" %>
     </div>
