@@ -12,12 +12,27 @@ body {
     padding: 0;
 }
 
-header {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #500000;
     color: white;
-    text-align: center;
     padding: 20px 0;
     position: relative;
+}
+
+.logo-and-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px; /* Adjust this margin as needed */
+}
+
+.title {
+    font-size: 14px; /* Adjust the font size as needed */
 }
 
 .header-content {
@@ -48,12 +63,6 @@ h1 {
 
 .logout-button:hover {
     background-color: #d32f2f;
-}
-
-/* Add styles for the logo icon */
-.logo-icon {
-    float: left;
-    width: 100px;
 }
 
 .section {
