@@ -1,0 +1,93 @@
+body { 
+    margin: 0;
+    background: #500000;
+    font-family: Work Sans, sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #ffffff;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 40px;
+    position: relative;
+}
+
+nav a {
+    color: #444444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 7px;
+    background-color: #444444;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 350ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.countdown {
+    text-align: center;
+    padding: 20px;
+}
+
+/* .logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+} */
