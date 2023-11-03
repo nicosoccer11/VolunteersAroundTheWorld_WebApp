@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1efee;
+    overflow: auto;
+}
+
+.delete-form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #500000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Add styles for the logo icon */
+.logo-icon {
+    float: left;
+    width: 100px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1;
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkin-section {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-in-button {
+    display: inline-block;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Add padding to the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline from links */
+}
+
+.check-in-button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+.events-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-list {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.event-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.event-details {
+    flex-grow: 1; /* Allow event details to grow and take up available space */
+    white-space: nowrap; /* Prevent wrapping */
+    padding-right: 10px; /* Add right padding to create space */
+}
+
+.add-event-button {
+    margin: 3px;
+}
+
+.delete-button {
+    padding: 5px 10px; /* Add space to the left and right sides */
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background-color: #bc0b0b;
+}
+
+button, input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Position the dropdown to the right */
+}
+
+/* Left-aligned dropdown */
+.dropdown.left .dropdown-content {
+    right: auto;
+    left: 0;
+}
+
+.dropdown-content .static-item {
+    font-weight: bold;
+    color: black;
+}
+
+.dropdown-content .static-item-no-attendance {
+    color: black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px 2px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent; /* Remove hover background color */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

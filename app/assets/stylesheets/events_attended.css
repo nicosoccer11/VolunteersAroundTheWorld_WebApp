@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1efee;
+  margin: 0;
+  padding: 0;
+}
+
+.container_events {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px 20px; /* Increase the margin-top value here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.split-container {
+  display: flex;
+  width: 100%;
+}
+
+.split-container > * {
+  flex: 1;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.list-container {
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Add border */
+  margin: 5px;
+  background-color: #f1efee;
+}
+
+ul.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.events-list li {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+}
+
+.event-name {
+  flex: 1;
+}
+
+.event-date {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* .simple-calendar styles */
+.simple-calendar {
+  background-color: #f1efee;
+  border: 1px solid #ccc;
+  padding: 1px;
+  display: inline-block;
+  margin: 1px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.simple-calendar .day.has-events {
+  background-color: white; /* Set the background color for days with events to white */
+}
+
+.simple-calendar .wday-0 {}
+.simple-calendar .wday-1 {}
+.simple-calendar .wday-2 {}
+.simple-calendar .wday-3 {}
+.simple-calendar .wday-4 {}
+.simple-calendar .wday-5 {}
+.simple-calendar .wday-6 {}
+
+.simple-calendar .today {}
+.simple-calendar .past {}
+.simple-calendar .future {}
+
+.simple-calendar .start-date {}
+
+.simple-calendar .prev-month {}
+.simple-calendar .next-month {}
+.simple-calendar .current-month {}
+
+.simple-calendar .has-events {}

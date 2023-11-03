@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   post 'create_profile', to: 'users#create_profile'
 
   get 'users/events_attended', to: 'users#events_attended', as: 'events_attended'
+  get 'users/upcoming_events', to: 'users#upcoming_events', as: 'upcoming_events'
 
   # Users routes
   resources :users, except: :show do
@@ -36,8 +37,13 @@ Rails.application.routes.draw do
       get 'profile_setup'
       post 'create_profile'
     end
+
+    member do
+      post 'checkin'
+    end
     post 'add_admin', on: :collection
   end
+
 
   # Events routes
   resources :events, only: %i[index new create destroy]

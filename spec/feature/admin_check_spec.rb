@@ -23,14 +23,6 @@ RSpec.feature 'Admin Check-In', type: :feature do
       date: Date.today,
       hasCountdown: false
     )
-    if event.save
-      # Event was successfully created
-      puts "Event was created successfully"
-    else
-      # Event creation failed, check for errors
-      errors = event.errors.full_messages
-      puts "Event creation failed with the following errors: #{errors}"
-    end
 
     # Visit the admin check-in page
     visit admin_checkin_path
