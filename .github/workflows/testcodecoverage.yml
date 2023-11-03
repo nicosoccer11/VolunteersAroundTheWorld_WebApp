@@ -73,8 +73,15 @@ jobs:
         bundler exec rspec
 #        npx update-browserslist-db@latest
 #        bundle exec rake webpacker:compile
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage/
 
-
+    - name: Run Brakeman
+      run: |
+        bundle exec brakeman
 
   # rubocop-test:
   #   name: Rubocop

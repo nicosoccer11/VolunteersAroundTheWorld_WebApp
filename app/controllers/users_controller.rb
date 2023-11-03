@@ -116,6 +116,11 @@ class UsersController < ApplicationController
     @attended_events = @user.events
   end
 
+  def upcoming_events
+    @events = Event.where("date >= ?", Date.current).order(:date)
+  end
+  
+
   private
 
   def user_params
