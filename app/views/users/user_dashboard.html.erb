@@ -17,37 +17,13 @@
                 <li><a href="<%= upcoming_events_path %>">Upcoming Events</a></li>
                 <li><a href="<%= events_attended_path %>">Events Attended</a></li>
                 <li><a href="<%= user_checkin_path %>">Check In</a></li>
+                <% if @current_user && @current_user.isAdmin? %>
+                   <li> <%= link_to "Admin Dashboard", admin_dashboard_path, class: "user-button" %></li>
+                <% end %>
                 <li class="logout-button"><a href="<%= logout_path %>">Log Out</a></li>
+                
             </ul>
         </nav>
-
-    <div class="header-content">
-        <h1>User Dashboard</h1>
-        <% if @current_user && @current_user.isAdmin? %>
-            <%= link_to "Admin Dashboard", user_dashboard_path, class: "user-button" %>
-        <% end %>
-        <%= link_to "Log Out", logout_path, class: "logout-button" %>
-    </div>
-</header>
-
-<div class="section">
-    <h2>Upcoming Events</h2>
-    <div class="scrollable-container">
-        <div class="event-list">
-        <% if @events.present? %>
-            <% @events.each do |event| %> 
-                <div class="event-item">
-                    <div class="event-info">
-                        <span>Event Name: <%= event.name %></span>
-                        <span>Date: <%= event.date.present? ? event.date.strftime('%m/%d/%y') : "Date not set" %></span>
-                    </div>
-                    <%= link_to "Check-In", user_checkin_path, class: "checkin-button" %> 
-                </div>
-            <% end %>
-        <% else %>
-            <p>No upcoming events.</p>
-        <% end %>
-    </div>
 </header>
 
 

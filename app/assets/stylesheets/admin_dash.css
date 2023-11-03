@@ -20,6 +20,12 @@ body {
     color: white;
     padding: 20px 0;
     position: relative;
+    text-align: center;
+}
+
+.header h1 {
+    
+   
 }
 
 .logo-and-title {
@@ -29,6 +35,10 @@ body {
 
 .logo {
     margin-right: 10px; /* Adjust this margin as needed */
+}
+
+.logo-icon {
+    height:90px;
 }
 
 .title {
