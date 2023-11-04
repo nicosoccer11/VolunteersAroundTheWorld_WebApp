@@ -59,7 +59,7 @@
         <h2>Upcoming Events</h2>
         <div class="event-buttons">
             <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
-            <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-final-countdown-button" %>
+            <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-event-button" %>
         </div>
         <div class="event-list">
             <% upcoming_events = @events.select { |event| event.date.present? && event.date >= Date.today } %>
