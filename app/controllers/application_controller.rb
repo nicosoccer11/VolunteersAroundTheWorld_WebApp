@@ -9,7 +9,12 @@ class ApplicationController < ActionController::Base
   def current_user_name
     user_email = session[:user_email]
     user = User.find_by(email: user_email)
-    user.present? ? user.first_name + " " + user.last_name : 'Unknown User'
+    if user.present?
+      full_name = [user.first_name, user.last_name].compact.join(" ")
+      full_name.present? ? full_name : 'Unknown User'
+    else
+      'Unknown User'
+    end
   end
   helper_method :current_user_name
 

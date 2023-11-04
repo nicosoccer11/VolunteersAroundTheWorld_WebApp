@@ -30,9 +30,11 @@
           <ul class="events-list">
             <% if @attended_events.present? %>
               <% @attended_events.each do |event| %>
-                <li>
-                  <%= link_to event.name, event_path(event) %> 
-                </li>
+                <%= link_to event_path(event) do %>
+                  <li>
+                    <%= event.name %>
+                  </li>
+                <% end %>
               <% end %>
             <% else %>
               <li>No attended events found.</li>
