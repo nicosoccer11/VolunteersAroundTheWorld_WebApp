@@ -86,11 +86,14 @@ h1 {
 }
 
 .scrollable-table {
-    max-height: 300px; 
+    max-height: 200px; 
     overflow-y: auto; 
+    overflow-x: auto;
     margin-bottom: 20px; 
     border: 1px solid #ccc; 
 }
+
+
 
 .vertical-container {
     display: flex;
@@ -141,6 +144,7 @@ h1 {
 
 .event-item {
     margin-bottom: 10px;
+    
     display: flex;
     align-items: center; /* Center items vertically */
 }
@@ -152,13 +156,17 @@ h1 {
 }
 
 .add-event-button {
-    background-color: #007bff; /* Bootstrap primary color for buttons */
+    background-color: #5a9bec;
     color: white;
     padding: 10px 15px; /* Padding inside the buttons */
     border-radius: 5px; /* Rounded corners for buttons */
     text-decoration: none; /* Remove underline from links */
     display: inline-block; /* Align buttons side by side */
     margin-right: 10px; /* Space between buttons */
+}
+
+.add-event-button:hover {
+    background-color: blue;
 }
 
 .delete-button {
@@ -262,4 +270,72 @@ background-color: #45a049;
 /* Add a hover effect for rows */
 .user-table tbody tr:hover {
     background-color: #f1f1f1;
+}
+
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.events-table th,
+.events-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.events-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.events-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.events-table .final-countdown-event {
+    background-color: #ffefef; /* Light red for final countdown events, adjust color as needed */
+}
+
+
+
+
+.view-all-events-button {
+    padding: 10px 15px;
+    background-color: #5a9bec;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.view-all-events-button:hover {
+    background-color: blue;
+}
+
+
+
+.bottom-right-container {
+    position: fixed;
+    right: 10px; 
+    bottom: 10px; 
+    z-index: 1000; 
+}
+
+.bottom-right-link {
+    display: block; 
+    padding: 10px; 
+    background-color: #f44336; 
+    color: #ffffff; 
+    text-align: center;
+    border-radius: 5px; 
+    text-decoration: none; 
+}
+
+.bottom-right-link:hover {
+    background-color: #d32f2f;
 }
