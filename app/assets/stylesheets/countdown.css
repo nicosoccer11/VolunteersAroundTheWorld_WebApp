@@ -1,43 +1,77 @@
 .countdown {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin: 0 auto;
-  }
-  
-  .days,
-  .hours,
-  .minutes {
-    font-size: 2.5em;
-    margin: 0 10px; /* Adjust the margin as needed */
-    color: white; /* Set the text color to white */
-    font-weight: bold; /* Optionally, set the text to bold */
-  }
-  
-  .days::after,
-  .hours::after {
-    content: ':';
-  }
-  
-  /* Optionally, you can style the text and the container background */
-  .days,
-  .hours,
-  .minutes {
-    background-color: rgba(0, 0, 0, 0.1); /* Background color for the spans */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Border style */
-    padding: 10px; /* Adjust the padding as needed */
-    border-radius: 5px; /* Adjust the border radius as needed */
-  }
-  
-  /* Optionally, style the labels (days, hours, minutes) */
-  .days-label,
-  .hours-label,
-  .minutes-label {
-    text-transform: uppercase;
-    color: white; /* Set the text color to white */
-    font-weight: bold; /* Optionally, set the text to bold */
-    font-size: 0.8em; /* Adjust font size as needed */
-    text-align: center; /* Center align the labels */
-    margin: 5px 0; /* Adjust the margin as needed */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 30px auto 0;
+  background-color: #ffffff;
+}
+
+.countdown-container {
+  max-width: 1100px; /* Set a maximum width as per your design */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 120px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.countdown-header {
+  text-align: center;
+  margin-top: 100px; /* Add margin-top for spacing */
+}
+
+.countdown-header h1 {
+  font-size: 2.5em; /* Adjust font size as needed */
+  color: #000000; /* Set the text color to your desired color */
+
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the label and number vertically */
+  color: white;
+}
+
+.days,
+.hours,
+.minutes {
+    font-size: 6em;
+    font-weight: bold;
+    background-color: #5a9bec;
+    border: 2px solid #4285f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; /* Add spacing between label and number */
+}
+
+.days::after,
+.hours::after {
+  content: ':';
+}
+
+/* Optionally, style the labels (days, hours, minutes) */
+.days-label,
+.hours-label,
+.minutes-label {
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.final-word {
+  color: black; /* Color for "FINAL" */
+}
+
+.event-word {
+  color: red; /* Color for "EVENT" */
+}
+
+.countdown-word {
+  color: black; /* Color for "COUNTDOWN" */
+}
