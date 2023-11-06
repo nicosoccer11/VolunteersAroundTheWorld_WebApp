@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('countdown.css') %>">
     <title>User Dashboard</title>
 </head>
 <body>
@@ -26,12 +27,31 @@
         </nav>
 </header>
 
+<div class="countdown-container">
+    <div class="countdown-header">
+        <h1>
+            <span class="final-word">FINAL</span>
+            <span class="event-word">EVENT</span>
+            <span class="countdown-word">COUNTDOWN</span>
+        </h1>
+    </div>
 
-<div class="countdown" data-final-countdown-date="<%= @final_countdown_date %>">
-  <span class="days"></span> days
-  <span class="hours"></span> hours
-  <span class="minutes"></span> minutes
+    <div class="countdown" data-final-countdown-date="<%= @final_countdown_date %>">
+        <div class="countdown-item">
+            <span class="days-label">Days</span>
+            <span class="days"></span>
+        </div>
+        <div class="countdown-item">
+            <span class="hours-label">Hours</span>
+            <span class="hours"></span>
+        </div>
+        <div class="countdown-item">
+            <span class="minutes-label">Minutes</span>
+            <span class="minutes"></span>
+        </div>
+    </div>
 </div>
+
 
 <%= javascript_include_tag 'countdown' %>
 </body>
