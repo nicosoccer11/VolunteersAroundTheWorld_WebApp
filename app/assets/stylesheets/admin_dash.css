@@ -319,14 +319,14 @@ background-color: #45a049;
 
 
 
-.bottom-right-container {
+.bottom-left-container {
     position: fixed;
-    right: 10px; 
+    left: 10px; 
     bottom: 10px; 
     z-index: 1000; 
 }
 
-.bottom-right-link {
+.bottom-left-link {
     display: block; 
     padding: 10px; 
     background-color: #f44336; 
@@ -336,6 +336,6 @@ background-color: #45a049;
     text-decoration: none; 
 }
 
-.bottom-right-link:hover {
+.bottom-left-link:hover {
     background-color: #d32f2f;
 }
