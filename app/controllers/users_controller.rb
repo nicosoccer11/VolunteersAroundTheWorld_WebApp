@@ -31,6 +31,11 @@ class UsersController < ApplicationController
   
     event = Event.find_by(id: params[:event_id]) 
     user = User.find_by(email: session[:user_email])
+
+    # checks if user exists, if they dont they will be redirected to log in again
+    if user.nil?
+      redirect_to new_user_session_path and return
+    end
   
     # Check if phone numbers match
     if user.phone_number != params[:phone_number]
@@ -114,7 +119,13 @@ class UsersController < ApplicationController
 
   def events_attended
     @user = User.find_by(email: session[:user_email])
-    @attended_events = @user.events
+
+    # makes sure current stored user email is valid, otherwise user is redirected to log in again
+    if @user
+      @attended_events = @user.events
+    else
+      redirect new_user_session_path
+    end
   end
 
   def upcoming_events
