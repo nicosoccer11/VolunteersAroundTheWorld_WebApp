@@ -6,12 +6,11 @@ h1 {
 }
 
 .section {
-    background-color: #f1efee;
+    background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    flex: 1;
+    margin: 10px auto; /* Set left and right margins to auto */
     width: 80%;
 }
 
