@@ -89,7 +89,7 @@
                         <tr class="<%= index.even? ? 'even-row' : 'odd-row' %>">
                             <td><%= user.email %></td>
                             <td><%= user.phone_number %></td>
-                            <td><%= user.classification.name %></td>
+                            <td><%= user.classification&.name %></td>
                         </tr>
                     <% end %>
                 </tbody>
