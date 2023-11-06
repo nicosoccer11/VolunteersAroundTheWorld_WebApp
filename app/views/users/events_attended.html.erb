@@ -4,9 +4,15 @@
   <head>
     <link rel="stylesheet" type="text/css" href="<%= asset_path('events_attended.css') %>">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
     <title>Events Attended</title>
   </head>
   <body>
+  <% if flash[:alert].present? %>
+  <div class="alert alert-alert">
+      <%= flash[:alert] %>
+  </div>
+<% end %>
     <header>
     <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
 <p class="title">Volunteers Around the World</p>

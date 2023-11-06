@@ -86,44 +86,68 @@
       text-overflow: ellipsis;
     }
 
+    .alert.alert-alert {
+      background-color: #f44336; /* Red background color */
+      color: white; /* White text color */
+      padding: 10px;
+      border-radius: 4px;
+    }
+
     /* .simple-calendar styles */
-    .simple-calendar {
-      background-color: #f1efee;
-      border: 1px solid #ccc;
-      padding: 1px;
-      display: inline-block;
-      margin: 1px;
-      width: 100%;
-      max-width: 100%;
-    }
+.simple-calendar {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  display: inline-block;
+  margin: 1px;
+  
+}
 
-    .simple-calendar .day.has-events {
-      background-color: white; /* Set the background color for days with events to white */
-    }
+.simple-calendar .day.has-events {
+  background-color: white; /* Set the background color for days with events to white */
+}
 
-    .simple-calendar .wday-0 {}
-    .simple-calendar .wday-1 {}
-    .simple-calendar .wday-2 {}
-    .simple-calendar .wday-3 {}
-    .simple-calendar .wday-4 {}
-    .simple-calendar .wday-5 {}
-    .simple-calendar .wday-6 {}
 
-    .simple-calendar .today {}
-    .simple-calendar .past {}
-    .simple-calendar .future {}
+.simple-calendar .prev-month {
+  color: gray;
+  border: 1px solid gray;
+}
+.simple-calendar .next-month {
+  color:  gray;
+  border: 1px solid gray;
+}
+.simple-calendar .current-month {
+  border: 2px solid black;
+  padding: 4px;
+  height: 4vh;
+  margin: 0;
+}
 
-    .simple-calendar .start-date {}
+.calendar-title {
+  font-weight: bold;
+  margin: 0 25%; 
+}
 
-    .simple-calendar .prev-month {}
-    .simple-calendar .next-month {}
-    .simple-calendar .current-month {}
+.simple-calendar a{
+  border-radius: 8px;
+  padding: 6px;
+  background-color: #500000;
+  color: white;
+}
 
-    .simple-calendar .has-events {}
+.calendar-heading {
+  margin-bottom: 5%;
+}
   </style>
 
 </head>
 <body>
+<% flash.each do |type, message| %>
+  <div class="flash-message <%= type %>">
+  <%= message %>
+  </div>
+<% end %>
   <div class="container">
     <h1>All Events</h1>
     <div class="split-container">
