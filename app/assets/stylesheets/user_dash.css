@@ -8,10 +8,35 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex: 1; 
+    text-align: center; 
 }
 
+
+
+
+
+
 header {
-    background: #500000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #500000;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    
+}
+.title {
+    font-size: 14px; /* Adjust the font size as needed */
+    margin-right: -200px;
+    width: 60px;
+    margin-left: 7px;
+    margin-top: 20px;
 }
 
 header::after {
@@ -20,6 +45,25 @@ header::after {
     clear: both;
 }
 
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    
+    
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
 .logo {
     float: left;
     width: 100px;
