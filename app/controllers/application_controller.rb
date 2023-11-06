@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
     # The following deals with gmail not requiring a user to have two names. In the case that only one name or no name appears, we deal with
     # how we want to display the name below.
     if user.present?
-      fullName = [user.first_name, user.last_name].compact.join(" ")
-      fullName.present? ? fullName : 'Unknown User'
+      full_name = [user.first_name, user.last_name].compact.join(" ")
+      full_name.present? ? full_name : 'Unknown User'
     else
       'Unknown User'
     end
