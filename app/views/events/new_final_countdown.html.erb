@@ -60,9 +60,22 @@
       text-align: center;
       margin-top: 20px;
     }
+
+    .alert.alert-alert {
+      background-color: #f44336; /* Red background color */
+      color: white; /* White text color */
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
   </style>
 </head>
 <body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
   <div class="container">
     <h1>Create a Final Countdown Event</h1>
 

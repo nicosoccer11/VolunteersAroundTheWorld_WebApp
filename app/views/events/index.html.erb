@@ -73,6 +73,13 @@
       text-overflow: ellipsis;
     }
 
+    .alert.alert-alert {
+      background-color: #f44336; /* Red background color */
+      color: white; /* White text color */
+      padding: 10px;
+      border-radius: 4px;
+    }
+
     /* .simple-calendar styles */
     .simple-calendar {
       background-color: #f1efee;
@@ -111,6 +118,11 @@
 
 </head>
 <body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
   <div class="container">
     <h1>All Events</h1>
     <div class="split-container">

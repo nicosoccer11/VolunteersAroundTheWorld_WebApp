@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/controllers/application_controller_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/controllers/application_controller_spec.rb": {
         "lines": [
           null,
           1,
@@ -30,8 +30,8 @@
           null,
           null,
           null,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           1,
@@ -49,7 +49,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/rails_helper.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/rails_helper.rb": {
         "lines": [
           null,
           null,
@@ -118,7 +118,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/environment.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -129,7 +129,7 @@
           1
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/application.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/application.rb": {
         "lines": [
           null,
           null,
@@ -145,7 +145,7 @@
           1,
           null,
           1,
-          1,
+          null,
           null,
           null,
           null,
@@ -158,7 +158,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/boot.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -168,7 +168,7 @@
           1
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/environments/test.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -234,7 +234,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/initializers/assets.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -252,324 +252,8 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/initializers/content_security_policy.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/initializers/content_security_policy.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/initializers/devise.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -598,7 +282,323 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/initializers/filter_parameter_logging.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/initializers/devise.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nicogarcia/431proj/web_app/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -612,7 +612,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/initializers/inflections.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -633,7 +633,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/initializers/permissions_policy.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -649,7 +649,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/config/routes.rb": {
+      "/Users/nicogarcia/431proj/web_app/config/routes.rb": {
         "lines": [
           null,
           null,
@@ -708,7 +708,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/models/user.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/models/user.rb": {
         "lines": [
           null,
           null,
@@ -741,7 +741,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/models/application_record.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -750,7 +750,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/helpers/application_helper.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -758,7 +758,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/helpers/pages_helper.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/helpers/pages_helper.rb": {
         "lines": [
           null,
           null,
@@ -766,7 +766,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/helpers/sessions_helper.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/helpers/sessions_helper.rb": {
         "lines": [
           null,
           null,
@@ -774,7 +774,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/helpers/users_helper.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/helpers/users_helper.rb": {
         "lines": [
           null,
           null,
@@ -782,7 +782,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/controllers/application_controller.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -833,7 +833,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/controllers/events_controller_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/controllers/events_controller_spec.rb": {
         "lines": [
           null,
           null,
@@ -869,7 +869,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/controllers/users_controller_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/controllers/users_controller_spec.rb": {
         "lines": [
           null,
           null,
@@ -903,7 +903,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/controllers/users_controller.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/controllers/users_controller.rb": {
         "lines": [
           null,
           null,
@@ -918,13 +918,13 @@
           null,
           null,
           1,
-          4,
-          4,
-          4,
+          3,
+          3,
+          3,
           null,
           null,
           1,
-          4,
+          3,
           0,
           null,
           null,
@@ -946,14 +946,14 @@
           null,
           null,
           2,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           0,
           0,
@@ -1049,7 +1049,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/feature/admin_button_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/feature/admin_button_spec.rb": {
         "lines": [
           1,
           1,
@@ -1087,8 +1087,8 @@
           null,
           null,
           1,
-          1,
-          1,
+          0,
+          0,
           null,
           null,
           null,
@@ -1105,7 +1105,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/feature/admin_check_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/feature/admin_check_spec.rb": {
         "lines": [
           null,
           null,
@@ -1187,7 +1187,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/feature/countdown_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/feature/countdown_spec.rb": {
         "lines": [
           1,
           null,
@@ -1220,7 +1220,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/feature/user_checkin_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/feature/user_checkin_spec.rb": {
         "lines": [
           1,
           null,
@@ -1292,7 +1292,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/feature/user_class_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/feature/user_class_spec.rb": {
         "lines": [
           1,
           null,
@@ -1335,7 +1335,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/helpers/sessions_helper_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/helpers/sessions_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1356,7 +1356,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/helpers/users_helper_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/helpers/users_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1377,7 +1377,7 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/models/classification_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/models/classification_spec.rb": {
         "lines": [
           1,
           null,
@@ -1394,14 +1394,14 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/models/classification.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/models/classification.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/models/event_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/models/event_spec.rb": {
         "lines": [
           null,
           null,
@@ -1415,83 +1415,6 @@
           null,
           1,
           1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/models/event.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/models/events_user_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/models/events_user.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null
-        ]
-      },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/models/user_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           null,
           null,
@@ -1502,7 +1425,18 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/requests/sessions_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/models/event.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/nicogarcia/431proj/web_app/spec/models/events_user_spec.rb": {
         "lines": [
           null,
           null,
@@ -1510,12 +1444,65 @@
           null,
           1,
           1,
+          1,
           null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/spec/requests/users_spec.rb": {
+      "/Users/nicogarcia/431proj/web_app/app/models/events_user.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/nicogarcia/431proj/web_app/spec/models/user_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nicogarcia/431proj/web_app/spec/requests/sessions_spec.rb": {
         "lines": [
           null,
           null,
@@ -1528,7 +1515,20 @@
           null
         ]
       },
-      "/csce431/VolunteersAroundTheWorld_WebApp/app/controllers/events_controller.rb": {
+      "/Users/nicogarcia/431proj/web_app/spec/requests/users_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nicogarcia/431proj/web_app/app/controllers/events_controller.rb": {
         "lines": [
           null,
           null,
@@ -1593,6 +1593,6 @@
         ]
       }
     },
-    "timestamp": 1699306539
+    "timestamp": 1699311384
   }
 }

@@ -5,9 +5,15 @@
     
     <link rel="stylesheet" type="text/css" href="<%= asset_path('checkin.css') %>">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
     <title>User Check-In</title>
 </head>
 <body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
 <header>
 <div class="container">
 
