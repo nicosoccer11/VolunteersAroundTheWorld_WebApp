@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe EventsUser, type: :model do
   it 'is valid with valid attributes' do
-    user = User.create(first_name: 'John', last_name: 'Doe', email: 'test@example.com', isAdmin: false,
+    user = User.create(first_name: 'John', last_name: 'Doe', email: 'test2882@example.com', isAdmin: false,
                        password: 'password')
     event = Event.create(name: 'Event 1', date: Date.today)
 
