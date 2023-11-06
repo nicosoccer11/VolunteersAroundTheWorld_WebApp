@@ -124,7 +124,7 @@ class UsersController < ApplicationController
     if @user
       @attended_events = @user.events
     else
-      redirect new_user_session_path
+      redirect_to new_user_session_path
     end
   end
 
