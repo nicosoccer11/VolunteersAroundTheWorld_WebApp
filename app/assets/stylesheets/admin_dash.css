@@ -85,6 +85,20 @@ h1 {
     width: 100%;
 }
 
+.scrollable-table {
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column; 
+    width: 40%; 
+}
+
+
 .checkin-section {
     width: 200px;
     height: 100px;
@@ -110,12 +124,16 @@ h1 {
 }
 
 .events-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #f8f9fa; /* Light background for the section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing around the content */
+    margin-top: 20px; /* Space above the section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
+.event-buttons {
+    text-align: center; /* Center the buttons */
+    margin-bottom: 20px; /* Space below the buttons */
+}
 .event-list {
     margin-top: 10px;
     overflow: hidden;
@@ -134,7 +152,13 @@ h1 {
 }
 
 .add-event-button {
-    margin: 3px;
+    background-color: #007bff; /* Bootstrap primary color for buttons */
+    color: white;
+    padding: 10px 15px; /* Padding inside the buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Align buttons side by side */
+    margin-right: 10px; /* Space between buttons */
 }
 
 .delete-button {
@@ -203,4 +227,39 @@ background-color: #45a049;
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+
+.user-info-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.user-table th,
+.user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.user-table thead {
+    background-color: #f2f2f2;
+}
+
+.user-table .even-row {
+    background-color: #f9f9f9;
+}
+
+.user-table .odd-row {
+    background-color: #fff;
+}
+
+/* Add a hover effect for rows */
+.user-table tbody tr:hover {
+    background-color: #f1f1f1;
 }
