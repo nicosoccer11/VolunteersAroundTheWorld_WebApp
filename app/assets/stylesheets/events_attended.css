@@ -6,14 +6,14 @@ body {
 }
 
 .container_events {
-  background-color: white;
+  background-color: #f1efee;
   padding: 20px;
   border-radius: 10px;
   margin: 40px 20px; /* Increase the margin-top value here */
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
 }
 
 h1 {
@@ -23,26 +23,28 @@ h1 {
 .split-container {
   display: flex;
   width: 100%;
+  justify-content: space-evenly;
 }
 
-.split-container > * {
+/* .split-container > * {
   flex: 1;
   padding: 10px;
   max-width: 50%;
-}
+} */
 
 .list-container {
-  max-height: 80%;
+  width: 40%;
   overflow-y: auto;
   border-radius: 10px;
   border: 1px solid #ccc; /* Add border */
   margin: 5px;
-  background-color: #f1efee;
+  background-color: white;
+  text-align: center;
 }
 
 ul.events-list {
   list-style: none;
-  padding: 0;
+  padding: 0 10px;
   margin: 0;
 }
 
@@ -51,8 +53,20 @@ ul.events-list li {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
+  border-radius: 10px;
   padding: 10px;
-  background-color: white;
+  background-color: #f1efee;
+  color: black;
+  text-decoration: none;
+}
+
+ul.events-list a{
+  text-decoration: none;
+}
+
+ul.events-list a:visited {
+  color: gray;
+  text-decoration: none;
 }
 
 .event-name {
@@ -70,13 +84,13 @@ ul.events-list li {
 
 /* .simple-calendar styles */
 .simple-calendar {
-  background-color: #f1efee;
+  background-color: white;
   border: 1px solid #ccc;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 12px;
   display: inline-block;
   margin: 1px;
-  width: 100%;
-  max-width: 100%;
+  
 }
 
 .simple-calendar .day.has-events {
@@ -99,11 +113,18 @@ ul.events-list li {
 
 .simple-calendar .prev-month {
   color: gray;
+  border: 1px solid gray;
 }
 .simple-calendar .next-month {
   color:  gray;
+  border: 1px solid gray;
 }
-.simple-calendar .current-month {}
+.simple-calendar .current-month {
+  border: 2px solid black;
+  padding: 4px;
+  height: 4vh;
+  margin: 0;
+}
 
 .simple-calendar .has-events {}
 
