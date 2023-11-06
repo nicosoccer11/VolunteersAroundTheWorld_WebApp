@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('upcoming_events.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
+    <title>Upcoming Events</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
+
+            <nav>
+                <ul>
+                    <li><a href="<%= user_dashboard_path %>">Home</a></li>
+                    <li><a href="<%= events_attended_path %>">Events Attended</a></li>
+                    <li><a href="<%= user_checkin_path %>">Check In</a></li>
+                    <li class="logout-button"><a href="<%= logout_path %>">Log Out</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="section">
+        <h2>Upcoming Events</h2>
+        <div class="scrollable-container">
+            <div class="event-list">
+                <% if @events.present? %>
+                    <% @events.each do |event| %> 
+                        <div class="event-item">
+                            <div class="event-info">
+                                <span>Event Name: <%= event.name %></span>
+                                <span>Date: <%= event.date.present? ? event.date.strftime('%m/%d/%y') : "Date not set" %></span>
+                            </div>
+                        </div>
+                    <% end %>
+                <% else %>
+                    <p>No upcoming events.</p>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

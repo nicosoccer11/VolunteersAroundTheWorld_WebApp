@@ -1,0 +1,95 @@
+body { 
+    margin: 0;
+    background: #f1efee;
+    font-family: Work Sans, sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #500000;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+}
+ 
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 40px;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 15px;
+    background-color: #350010;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 350ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.countdown {
+    text-align: center;
+    padding: 20px;
+}
+
+/* .logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+} */

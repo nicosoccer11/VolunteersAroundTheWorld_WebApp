@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def user_dashboard
     @events = Event.all
     @final_countdown_date = Event.find_by(hasCountdown: true)&.date
+    @current_user = User.find_by(email: session[:user_email])
   end
 
   def redirect_new_users_to_profile_setup
@@ -115,6 +116,11 @@ class UsersController < ApplicationController
     @user = User.find_by(email: session[:user_email])
     @attended_events = @user.events
   end
+
+  def upcoming_events
+    @events = Event.where("date >= ?", Date.current).order(:date)
+  end
+  
 
   private
 
