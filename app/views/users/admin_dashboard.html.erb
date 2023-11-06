@@ -15,11 +15,17 @@
         <p class="title">Volunteers Around the World</p>
     </div>
     <h1>Admin Dashboard</h1>
-    <%= link_to "User Dashboard", user_dashboard_path, class: "user-button" %>
     <%= link_to "Log Out", logout_path, class: "logout-button" %>
 </header>
 
-<div class="horizontal-container">
+            <div class="bottom-left-container">
+            <%= link_to user_dashboard_path , class: "user-button bottom-left-link" do %>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com/ License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg>
+                User Dashboard
+                <% end %>
+            </div>
+         <div class="horizontal-container">
+
     <!-- Form to grant admin status by email -->
     <div class="section">
         <%= form_with(url: add_admin_users_path, method: :post, local: true) do |f| %>
@@ -28,28 +34,33 @@
           <%= f.submit "Grant Admin Status" %>
           <% end %>
 
-        <!-- Current Admins Section -->
-        <h2>Current Admins</h2>
-        <div class="scrollable-table">
-        <table>
-            <tbody>
-            <% if @users.any? { |user| user.isAdmin? } %>
-                <% @users.each do |user| %>
-                    <% if user.isAdmin? %>
-                        <tr>
-                            <td><%= user.email %></td>
-                        </tr>
-                    <% end %>
-                <% end %>
-            <% else %>
-                <tr>
-                    <td>There aren't any current admins.</td>
-                </tr>
-            <% end %>
-            </tbody>
-        </table>
-        </div>
-    </div>
+          <!-- Current Admins Section -->
+          <h2>Current Admins</h2>
+          <div class="scrollable-table">
+              <table class="events-table">
+                  <thead>
+                      <tr>
+                          <th>Email</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <% if @users.any? { |user| user.isAdmin? } %>
+                          <% @users.each do |user| %>
+                              <% if user.isAdmin? %>
+                                  <tr>
+                                      <td><%= user.email %></td>
+                                  </tr>
+                              <% end %>
+                          <% end %>
+                      <% else %>
+                          <tr>
+                              <td>There aren't any current admins.</td>
+                          </tr>
+                      <% end %>
+                  </tbody>
+              </table>
+              </div>
+          </div>
 
 
     <div class="vertical-container">
@@ -87,56 +98,66 @@
         </div>
     </div>
     <!-- Upcoming Events Section -->
-    <div class="section events-section">
-        <h2>Upcoming Events</h2>
-        <div class="event-buttons">
-            <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
-            <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-event-button" %>
-        </div>
-        <div class="event-list">
-            <% upcoming_events = @events.select { |event| event.date.present? && event.date >= Date.today } %>
-            <% if upcoming_events.any? %>
-                <% upcoming_events.each do |event| %>
-                    <div class="event-item <%= 'final-countdown-event' if event.hasCountdown %>">
-                    <div class="event-details">
-                        <span><%= event.name %> <%= event.date.present? ? "- #{event.date.strftime('%B %d, %Y')}" : "- Date not set" %></span>
-                        </div>
-                        <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
-                            <%= button_tag type: 'submit', class: 'delete-button', data: { confirm: "Are you sure you want to delete the #{event.name} event?" } do %>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
-                            <% end %>
-                        <% end %>
-                        <div class="dropdown">
-                            <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg>
-                            </button>
-                            <div class="dropdown-content">
-                            <% if event.users.any? %>
-                                <a class="static-item" href="#">Attendance</a>
-                                <% event.users.each do |user| %>
-                                    <a href="#"><%= user.first_name + " " + user.last_name %></a>
+<div class="section events-section">
+    <h2>Upcoming Events</h2>
+    <div class="event-buttons">
+        <%= link_to "Add Event", events_new_path, class: "add-event-button" %>
+        <%= link_to "Add Final Countdown Event", new_final_countdown_event_path, class: "add-event-button" %>
+    </div>
+    <div class="scrollable-table">
+        <table class="events-table">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% upcoming_events = @events.select { |event| event.date.present? && event.date >= Date.today } %>
+                <% if upcoming_events.any? %>
+                    <% upcoming_events.each do |event| %>
+                        <tr class="<%= 'final-countdown-event' if event.hasCountdown %>">
+                            <td><%= event.name %></td>
+                            <td><%= event.date.present? ? event.date.strftime('%B %d, %Y') : "Date not set" %></td>
+                            <td>
+                                <%= form_with url: event_path(event), method: :delete, class: 'delete-form' do %>
+                                    <%= button_tag type: 'submit', class: 'delete-button', data: { confirm: "Are you sure you want to delete the #{event.name} event?" } do %>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
+                                    <% end %>
                                 <% end %>
-                            <% else %>
-                                <a class="static-item" href="#">Attendance</a>
-                                <a class="static-item-no-attendance" href="#">No users have checked in to this event.</a>
-                            <% end %>
-                            </div>
-                        </div>
-                    </div>
-                    
+                                <div class="dropdown">
+                                    <button class="dropdown-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg>
+                                    </button>
+                                    <div class="dropdown-content">
+                                        <% if event.users.any? %>
+                                            <a class="static-item" href="#">Attendance</a>
+                                            <% event.users.each do |user| %>
+                                                <a href="#"><%= user.first_name + " " + user.last_name %></a>
+                                            <% end %>
+                                        <% else %>
+                                            <a class="static-item" href="#">Attendance</a>
+                                            <a class="static-item-no-attendance" href="#">No users have checked in to this event.</a>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    <% end %>
+                <% else %>
+                    <tr>
+                        <td colspan="3">No upcoming events.</td>
+                    </tr>
                 <% end %>
-                <!-- "View All Events" button stays where it is -->
-                <div class="event-item">
-                    <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
-                </div>
-            <% else %>
-                <p>No upcoming events.</p>
-                <div class="event-item">
-                    <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
-                </div>
-            <% end %>
-        </div>
-    </div>  
+            </tbody>
+        </table>
+    </div>
+    <div class="event-item">
+        <%= link_to "View All Events", events_path, class: "view-all-events-button" %>
+    </div>
+</div>
+
       
 </div>
 </header>
