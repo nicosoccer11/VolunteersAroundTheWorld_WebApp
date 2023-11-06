@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.feature 'User Check-In', type: :feature do
     scenario "user inputs phone number and selects classification" do
         # Fill in classification table
-        Classification.delete_all
         Classification.create(name: 'Freshman')
         Classification.create(name: 'Sophomore')
         Classification.create(name: 'Junior')

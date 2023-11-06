@@ -1,0 +1,70 @@
+/* profile_setup.css */
+
+body {
+    background-color: #500000; /* Set the background color to maroon */
+}
+
+.profile-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Work Sans, sans-serif;
+    margin-top: 200px;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    display: block;
+    margin: 0 auto 20px; /* Center the logo and add some space below it */
+}
+
+.profile-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-form {
+    text-align: left;
+}
+
+.profile-field {
+    margin-bottom: 20px;
+    text-align: left; /* Align the text to the left */
+
+    /* Add these styles to control the width of the input field */
+    max-width: 100%; /* Make sure it doesn't exceed the container's width */
+}
+
+.profile-field label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 95%; /* Set the input field width to 100% of its container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-actions {
+    text-align: center;
+}
+
+.btn {
+    background-color: #5a9bec;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4285f4;
+}
