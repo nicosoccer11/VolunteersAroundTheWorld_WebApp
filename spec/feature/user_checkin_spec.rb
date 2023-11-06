@@ -42,7 +42,7 @@ RSpec.describe UsersController, type: :controller do
       user = User.create(
        first_name: 'John',
        last_name: 'Doe',
-       email: 'john.doe@example.com',
+       email: 'john.qoe@example.com',
        isAdmin: true,
        password: 'password',
        phone_number: "",

@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     user = User.new(
       first_name: 'John',
       last_name: 'Doe',
-      email: 'john.doe@example.com',
+      email: 'john.toe@example.com',
       password: 'password',
       phone_number: "",
       classification_id: classification.id
