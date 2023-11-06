@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('countdown.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
     <title>User Dashboard</title>
 </head>
 <body>
-<header>
+    <% flash.each do |type, message| %>
+        <div class="flash-message <%= type %>">
+        <%= message %>
+        </div>
+    <% end %>
+    <header>
 
 
     <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">

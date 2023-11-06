@@ -67,9 +67,22 @@
       cursor: pointer;
       display: block; 
     }
+
+    .alert.alert-alert {
+      background-color: #f44336; /* Red background color */
+      color: white; /* White text color */
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
   </style>
 </head>
 <body>
+<% flash.each do |type, message| %>
+  <div class="flash-message <%= type %>">
+  <%= message %>
+  </div>
+<% end %>
   <div class="container">
     <h1>Create a Final Countdown Event</h1>
 

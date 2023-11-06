@@ -2,8 +2,14 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="<%= asset_path('view_events.css') %>">
+<link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
 </head>
 <body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
     <div class="container">
         <%= link_to 'Back', events_attended_path, class: 'back-button' %>
         <div class="card">

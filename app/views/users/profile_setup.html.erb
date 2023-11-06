@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Your Profile</title>
     <link rel="stylesheet" type="text/css" href="<%= asset_path('profile_setup.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
 </head>
 <body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
     <div class="profile-container">
         <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
         <h2 class="profile-title">Complete Your Profile</h2>
