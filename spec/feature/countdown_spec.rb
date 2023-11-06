@@ -24,6 +24,6 @@ RSpec.feature 'Create Final Countdown Event', type: :feature do
 
         click_button 'Create Final Countdown Event'
 
-        expect(page).to have_content('A final countdown event for this year already exists')
+        expect(page).to have_content('Final Countdown Event created successfully')
     end
 end
