@@ -15,7 +15,7 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     background-color: #500000;
     color: white;
     padding: 20px 0;
@@ -24,12 +24,21 @@ body {
 }
 
 .logo-and-title {
+    margin-right: -150px;
     display: flex;
     align-items: center;
+    justify-content: center; 
+    flex: 1; 
+    text-align: center; 
+}
+
+.maintitle {
+    flex-grow: 1; /* This will make the title grow and take up the remaining space */
+    text-align: center; /* This will center the title text */
 }
 
 .logo {
-    margin-right: 10px; /* Adjust this margin as needed */
+    margin-right: 5px; /* Adjust this margin as needed */
 }
 
 .logo-icon {
@@ -64,6 +73,8 @@ h1 {
     right: 20px;
     transform: translateY(-50%);
     z-index: 1;
+    
+    
 }
 
 .logout-button:hover {
@@ -132,7 +143,7 @@ h1 {
 }
 
 .events-section {
-    background-color: #f8f9fa; /* Light background for the section */
+    background-color: white; 
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Spacing around the content */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
