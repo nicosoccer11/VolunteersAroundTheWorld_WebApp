@@ -9,7 +9,14 @@ class ApplicationController < ActionController::Base
   def current_user_name
     user_email = session[:user_email]
     user = User.find_by(email: user_email)
-    user.present? ? user.first_name + " " + user.last_name : 'Unknown User'
+    # The following deals with gmail not requiring a user to have two names. In the case that only one name or no name appears, we deal with
+    # how we want to display the name below.
+    if user.present?
+      fullName = [user.first_name, user.last_name].compact.join(" ")
+      fullName.present? ? fullName : 'Unknown User'
+    else
+      'Unknown User'
+    end
   end
   helper_method :current_user_name
 

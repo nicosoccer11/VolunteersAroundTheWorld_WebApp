@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1efee;
+  margin: 0;
+  padding: 0;
+}
+
+.container_events {
+  background-color: #f1efee;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px 20px; /* Increase the margin-top value here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.split-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+/* .split-container > * {
+  flex: 1;
+  padding: 10px;
+  max-width: 50%;
+} */
+
+.list-container {
+  width: 40%;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Add border */
+  margin: 5px;
+  background-color: white;
+  text-align: center;
+}
+
+ul.events-list {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+}
+
+ul.events-list li {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f1efee;
+  color: black;
+  text-decoration: none;
+}
+
+ul.events-list a{
+  text-decoration: none;
+}
+
+ul.events-list a:visited {
+  color: gray;
+  text-decoration: none;
+}
+
+.event-name {
+  flex: 1;
+}
+
+.event-date {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* .simple-calendar styles */
+.simple-calendar {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  display: inline-block;
+  margin: 1px;
+  
+}
+
+.simple-calendar .day.has-events {
+  background-color: white; /* Set the background color for days with events to white */
+}
+
+.simple-calendar .wday-0 {}
+.simple-calendar .wday-1 {}
+.simple-calendar .wday-2 {}
+.simple-calendar .wday-3 {}
+.simple-calendar .wday-4 {}
+.simple-calendar .wday-5 {}
+.simple-calendar .wday-6 {}
+
+.simple-calendar .today {}
+.simple-calendar .past {}
+.simple-calendar .future {}
+
+.simple-calendar .start-date {}
+
+.simple-calendar .prev-month {
+  color: gray;
+  border: 1px solid gray;
+}
+.simple-calendar .next-month {
+  color:  gray;
+  border: 1px solid gray;
+}
+.simple-calendar .current-month {
+  border: 2px solid black;
+  padding: 4px;
+  height: 4vh;
+  margin: 0;
+}
+
+.simple-calendar .has-events {}
+
+.calendar-title {
+  font-weight: bold;
+  margin: 0 30%; 
+}
+
+.simple-calendar a{
+  border-radius: 8px;
+  padding: 6px;
+  background-color: #500000;
+  color: white;
+}
+
+.calendar-heading {
+  margin-bottom: 5%;
+}

@@ -1,5 +1,15 @@
-<h1><%= @event.name %></h1>
-<p>Date: <%= @event.date %></p>
-
-
-<%= link_to 'Go Back', events_attended_path  %>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="<%= asset_path('view_events.css') %>">
+</head>
+<body>
+    <div class="container">
+        <%= link_to 'Back', events_attended_path, class: 'back-button' %>
+        <div class="card">
+            <div class="title"><%= @event.name %></div>
+            <p class="date">Occurred: <%= @event.date %></p>
+        </div>
+    </div>
+</body>
+</html>
