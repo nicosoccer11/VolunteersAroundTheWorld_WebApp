@@ -1,17 +1,21 @@
-// countdown.js
-
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
+    console.log('DOMContentLoaded event fired.');
     const finalCountdownDateElement = document.querySelector('.countdown');
-
-    if (finalCountdownDateElement) {
+    const days = document.querySelector('.days')
+    const daysElement = document.querySelector('.days');
+    const hoursElement = document.querySelector('.hours');
+    const minutesElement = document.querySelector('.minutes');
+  
+    if (finalCountdownDateElement.dataset.finalCountdownDate !== "" ) {
         const finalCountdownDate = new Date(finalCountdownDateElement.dataset.finalCountdownDate);
-        const daysElement = document.querySelector('.days');
-        const hoursElement = document.querySelector('.hours');
-        const minutesElement = document.querySelector('.minutes');
-
         countDownClock(finalCountdownDate, daysElement, hoursElement, minutesElement);
+    } else {
+        // Handle the case when there is no final countdown event
+        daysElement.textContent = '00';
+        hoursElement.textContent = '00';
+        minutesElement.textContent = '00';
     }
-});
+}
 
 function countDownClock(finalCountdownDate, daysElement, hoursElement, minutesElement) {
     let countdown;
@@ -36,9 +40,8 @@ function countDownClock(finalCountdownDate, daysElement, hoursElement, minutesEl
         const totalMinutes = Math.floor(totalSeconds / 60);
         const totalHours = Math.floor(totalMinutes / 60);
 
-        daysElement.textContent = Math.floor(totalHours / 24);
-        hoursElement.textContent = totalHours % 24;
-        minutesElement.textContent = totalMinutes % 60;
+        daysElement.textContent = String(Math.floor(totalHours / 24)).padStart(2, '0');
+        hoursElement.textContent = String(totalHours % 24).padStart(2, '0');
+        minutesElement.textContent = String(totalMinutes % 60).padStart(2, '0');
     }
-
 }
