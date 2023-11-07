@@ -1,18 +1,39 @@
-<!-- app/views/users/profile_setup.html.erb -->
-<h2>Complete Your Profile</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Profile</title>
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('profile_setup.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
+</head>
+<body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
+    <div class="profile-container">
+        <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
+        <h2 class="profile-title">Complete Your Profile</h2>
 
-<%= form_for @user, url: create_profile_path do |f| %>
-  <div class="field">
-  <%= f.label :phone_number, "Phone Number" %>
-  <%= f.text_field :phone_number, placeholder: "xxx-xxx-xxxx", class: 'form-control' %>
-  </div>
+        <%= form_for @user, url: create_profile_path, class: "profile-form" do |f| %>
+            <div class="profile-field">
+                <%= f.label :phone_number, "Phone Number" %>
+                <%= f.text_field :phone_number, placeholder: "xxx-xxx-xxxx", class: 'form-control' %>
+            </div>
 
-  <div class="field">
-    <%= f.label :classification_id %>
-    <%= f.select :classification_id, Classification.all.map { |c| [c.name, c.id] }, {}, class: 'form-control' %>
-  </div>
+            <div class="profile-field">
+                <%= f.label :classification_id %>
+                <%= f.select :classification_id, Classification.all.map { |c| [c.name, c.id] }, {}, class: 'form-control' %>
+            </div>
 
-  <div class="actions">
-    <%= f.submit 'Complete Profile' %>
-  </div>
-<% end %>
+            <div class="profile-actions">
+                <%= f.submit 'Complete Profile', class: 'btn btn-primary' %>
+            </div>
+        <% end %>
+    </div>
+</body>
+</html>
+
+

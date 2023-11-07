@@ -2,14 +2,15 @@ module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     def google_oauth2
       user = User.from_omniauth(auth)
-      
-      
-      
       #
       if user.persisted?
         # The following if statement prevents non-tamu emails from logging in
         if !auth.info.email.ends_with?('@tamu.edu')
-          redirect_to after_sign_out_path_for(user), alert: 'Only @tamu.edu email addresses are allowed.' and return
+          # redirect_to after_sign_out_path_for(user), alert: 'Only @tamu.edu email addresses are allowed.' and return
+          # # In your sign out action
+          flash[:alert] = 'ONLY @TAMU.EDU EMAIL ADDRESSES ARE ALLOWED'
+          redirect_to after_sign_out_path_for(user)
+          return
         end
         # the following notifies the user of a successful login and redirects them to the correct page
         flash[:success] = I18n.t('devise.omniauth_callbacks.success', kind: 'Google')

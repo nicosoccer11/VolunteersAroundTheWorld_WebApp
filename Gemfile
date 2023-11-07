@@ -80,6 +80,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'rack_session_access'
 end
 gem 'devise'
 gem 'omniauth'

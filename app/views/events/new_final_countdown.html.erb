@@ -56,13 +56,33 @@
     }
 
     .back-link {
-      display: block;
+      background-color: #5a9bec;
+      color: white;
+      padding: 10px 15px; /* Padding inside the buttons */
+      border-radius: 5px; /* Rounded corners for buttons */
+      text-decoration: none; /* Remove underline from links */
+      display: inline-block; /* Align buttons side by side */
+      margin-top: 20px; 
       text-align: center;
-      margin-top: 20px;
+      cursor: pointer;
+      display: block; 
     }
+
+    .alert.alert-alert {
+      background-color: #f44336; /* Red background color */
+      color: white; /* White text color */
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
   </style>
 </head>
 <body>
+<% flash.each do |type, message| %>
+  <div class="flash-message <%= type %>">
+  <%= message %>
+  </div>
+<% end %>
   <div class="container">
     <h1>Create a Final Countdown Event</h1>
 

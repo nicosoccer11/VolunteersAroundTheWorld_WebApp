@@ -5,22 +5,25 @@
     
     <link rel="stylesheet" type="text/css" href="<%= asset_path('checkin.css') %>">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
     <title>User Check-In</title>
 </head>
 <body>
+
 <header>
+<img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
+<p class="title">Volunteers Around the World</p>
 <div class="container">
 
-    <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
 
     <nav>
         <ul>
             <li><a href="<%= user_dashboard_path %>">Home</a></li>
             <li><a href="<%= upcoming_events_path %>">Upcoming Events</a></li>
             <li><a href="<%= events_attended_path %>">Events Attended</a></li>
-            <li class="logout-button"><a href="<%= logout_path %>">Log Out</a></li>
         </ul>
     </nav>
+    <%= link_to "Log Out", logout_path, class: "logout-button" %>
 
 </div>
 </header>

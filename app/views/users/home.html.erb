@@ -8,7 +8,7 @@
     <title>Welcome to Volunteers Around The World</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Work Sans, sans-serif;
             background-color: #500000;
             margin: 0;
             padding: 0;
@@ -48,6 +48,13 @@
             background-color: #5a9bec;
         }
 
+        .alert.alert-alert {
+        background-color: #f44336; /* Red background color */
+        color: white; /* White text color */
+        padding: 10px;
+        border-radius: 4px;
+        }
+
         a:hover {
             filter: brightness(90%);
         }
@@ -57,9 +64,15 @@
 </head>
 <body>
     <div class="container">
+        
         <img src="<%= asset_path 'IMG_6562.png' %>" alt="Volunteers Around The World Logo" class="logo">
 
         <h1>Welcome to Volunteers Around The World</h1>
+        <% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
         <%= link_to "Log in", new_user_session_path, class: "user-login" %>
     </div>
 </body>

@@ -39,17 +39,18 @@ class UsersController < ApplicationController
   
     # Check if phone numbers match
     if user.phone_number != params[:phone_number]
-      flash[:alert] = 'Phone number verification failed.'
       redirect_to user_dashboard_path
+      flash[:alert] = 'Phone number verification failed.'
       return
     end
   
     if event
       EventsUser.create(user_id: user.id, event_id: event.id)
       redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
+
     else
-      flash[:alert] = 'Event not found with the specified ID.'
       redirect_to user_dashboard_path
+      flash[:alert] = 'Event not found with the specified ID.'
     end
   end
 
@@ -77,11 +78,11 @@ class UsersController < ApplicationController
     if user
       userId = user.id
       EventsUser.create(user_id: userId, event_id: params[:event_id])
-      flash[:notice] = 'User checked in successfully.'
       redirect_to admin_dashboard_path
+      flash[:notice] = 'User checked in successfully.'
     else
-      flash[:alert] = 'No user found with the specified first name, last name, and email.'
       redirect_to admin_checkin_path
+      flash[:alert] = 'No user found with the specified first name, last name, and email.'
     end
   end
 
@@ -124,7 +125,7 @@ class UsersController < ApplicationController
     if @user
       @attended_events = @user.events
     else
-      redirect new_user_session_path
+      redirect_to new_user_session_path
     end
   end
 

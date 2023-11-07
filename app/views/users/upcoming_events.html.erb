@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('upcoming_events.css') %>">
     <link rel="stylesheet" type="text/css" href="<%= asset_path('user_dash.css') %>">
+    <link rel="stylesheet" type="text/css" href="<%= asset_path('flash_alert.css') %>">
     <title>Upcoming Events</title>
 </head>
 <body>
+<% if flash[:alert].present? %>
+            <div class="alert alert-alert">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
     <header>
+    <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
+<p class="title">Volunteers Around the World</p>
         <div class="container">
-
-            <img src="<%= asset_path('IMG_6562.png') %>" alt="logo" class="logo">
 
             <nav>
                 <ul>
                     <li><a href="<%= user_dashboard_path %>">Home</a></li>
                     <li><a href="<%= events_attended_path %>">Events Attended</a></li>
                     <li><a href="<%= user_checkin_path %>">Check In</a></li>
-                    <li class="logout-button"><a href="<%= logout_path %>">Log Out</a></li>
                 </ul>
             </nav>
+            <%= link_to "Log Out", logout_path, class: "logout-button" %>
 
         </div>
     </header>
