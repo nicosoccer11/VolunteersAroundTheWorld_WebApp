@@ -3,8 +3,6 @@ require "rack_session_access/capybara"
 
 RSpec.feature 'User Dashboard' do
   context 'Admin User' do
-    
-
     before do
       visit admin_dashboard_path
     end
@@ -40,7 +38,6 @@ RSpec.feature 'User Dashboard' do
   end
 
   context 'Regular User' do
-
     before do
       visit user_dashboard_path
     end

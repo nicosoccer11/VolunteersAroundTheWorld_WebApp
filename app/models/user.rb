@@ -19,6 +19,7 @@ class User < ApplicationRecord
       user.save(validate: false)  # Save without validation for now
     end
   end
+
   def is_admin?
     isAdmin
   end

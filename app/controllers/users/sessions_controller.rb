@@ -16,9 +16,9 @@ module Users
 
     def destroy
       revoke_google_oauth_token
-      super  # This will handle the regular logout process for Devise
+      super # This will handle the regular logout process for Devise
     end
-      
+
     def after_sign_out_path_for(_resource_or_scope)
       new_user_session_path
     end
@@ -35,13 +35,11 @@ module Users
 
     def revoke_google_oauth_token
       return unless session[:user_email].present?
-      
+
       user_email = session[:user_email]
       user = User.find_by(email: user_email)
-      if user && user.google_oauth_token.present?
-        user.update(google_oauth_token: nil)
-      end
-      
+      user.update(google_oauth_token: nil) if user && user.google_oauth_token.present?
+
       session.delete(:user_email)
     end
 

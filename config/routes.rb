@@ -44,7 +44,6 @@ Rails.application.routes.draw do
     post 'add_admin', on: :collection
   end
 
-
   # Events routes
   resources :events, only: %i[index new create destroy]
 

@@ -24,30 +24,31 @@ class EventsController < ApplicationController
   def new_final_countdown
     @event = Event.new(hasCountdown: true)
   end
-  
+
   def create_final_countdown
     # Delete all prior final countdown events
     Event.where(hasCountdown: true).destroy_all
-  
+
     @event = Event.new(event_params.merge(hasCountdown: true))
-  
+
     if @event.save
       redirect_to events_path, notice: 'Final Countdown Event created successfully.'
     else
       render :new_final_countdown
     end
   end
-    
+
   def show
     @event = Event.find(params[:id])
     # You can add any logic related to displaying an individual event here.
   end
+
   def destroy
     @event = Event.find(params[:id])
-    
+
     # Remove all associated entries in events_users before deleting the event
     @event.users.clear
-    
+
     @event.destroy
     redirect_to request.referrer || admin_dashboard_path, notice: 'Event was successfully deleted.'
   end
