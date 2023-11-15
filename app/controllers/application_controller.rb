@@ -5,7 +5,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
-    
   def current_user_name
     user_email = session[:user_email]
     user = User.find_by(email: user_email)
@@ -20,7 +19,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user_name
 
-
   private
 
   def current_user
@@ -34,6 +32,7 @@ class ApplicationController < ActionController::Base
   def require_user
     redirect_to users_home_path, alert: 'You must be logged in to access this page.' unless logged_in?
   end
+
   def after_sign_in_path_for(resource)
     if resource.isAdmin?
       admin_dashboard_path
@@ -41,7 +40,8 @@ class ApplicationController < ActionController::Base
       user_dashboard_path
     end
   end
-  def after_sign_out_path_for(resource_or_scope)
+
+  def after_sign_out_path_for(_resource_or_scope)
     users_home_path
   end
 end

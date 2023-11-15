@@ -17,33 +17,30 @@ class UsersController < ApplicationController
   end
 
   def redirect_new_users_to_profile_setup
-    if session[:new_user]
-      redirect_to profile_setup_path
-    end
-  end
+    return unless session[:new_user]
 
+    redirect_to profile_setup_path
+  end
 
   def checkin
     @events = Event.all
     @test = current_user
-  
+
     return unless request.post?
-  
-    event = Event.find_by(id: params[:event_id]) 
+
+    event = Event.find_by(id: params[:event_id])
     user = User.find_by(email: session[:user_email])
 
     # checks if user exists, if they dont they will be redirected to log in again
-    if user.nil?
-      redirect_to new_user_session_path and return
-    end
-  
+    redirect_to new_user_session_path and return if user.nil?
+
     # Check if phone numbers match
     if user.phone_number != params[:phone_number]
       redirect_to user_dashboard_path
       flash[:alert] = 'Phone number verification failed.'
       return
     end
-  
+
     if event
       EventsUser.create(user_id: user.id, event_id: event.id)
       redirect_to user_dashboard_path, notice: 'Successfully checked-in!'
@@ -56,7 +53,7 @@ class UsersController < ApplicationController
 
   def add_admin
     email = params[:email]
-    user = User.find_by(email: email)
+    user = User.find_by(email:)
 
     if user
       user.update(isAdmin: true)
@@ -99,13 +96,9 @@ class UsersController < ApplicationController
     user.phone_number = user_params[:phone_number]
     user.classification_id = user_params[:classification_id]
     # This part is for testing purposes
-    if user.email.blank?
-      user.email = "new_user@signedin.test"
-    end
-    if user.password.blank?
-      user.password = "test123"
-    end
-    
+    user.email = "new_user@signedin.test" if user.email.blank?
+    user.password = "test123" if user.password.blank?
+
     if user.save
       sign_in(user)
       redirect_to user_dashboard_path, notice: 'Profile created successfully.'
@@ -132,12 +125,10 @@ class UsersController < ApplicationController
   def upcoming_events
     @events = Event.where("date >= ?", Date.current).order(:date)
   end
-  
 
   private
 
   def user_params
     params.require(:user).permit(:phone_number, :classification_id)
   end
-
 end

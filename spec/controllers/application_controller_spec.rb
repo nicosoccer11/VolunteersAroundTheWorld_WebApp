@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe ApplicationController, type: :controller do
@@ -10,25 +9,25 @@ RSpec.describe ApplicationController, type: :controller do
 
   describe '#current_user_name' do
     it 'returns the full name of the user if a user is found' do
-        Classification.create(name: 'Freshman')
-        classification_name = 'Freshman'
-        classification = Classification.find_by(name: classification_name)
-        user = User.new(
-          first_name: 'John',
-          last_name: 'Doe',
-          email: 'john.doe@example.com',
-          password: 'password',
-          phone_number: "",
-          classification_id: classification.id
-        )
-        if user.save
-            # User was saved successfully
-        else
-            # There was an error
-            errors = user.errors.full_messages
-            puts errors
-        end
-        
+      Classification.create(name: 'Freshman')
+      classification_name = 'Freshman'
+      classification = Classification.find_by(name: classification_name)
+      user = User.new(
+        first_name: 'John',
+        last_name: 'Doe',
+        email: 'john.doe@example.com',
+        password: 'password',
+        phone_number: "",
+        classification_id: classification.id
+      )
+      if user.save
+      # User was saved successfully
+      else
+        # There was an error
+        errors = user.errors.full_messages
+        puts errors
+      end
+
       session[:user_email] = user.email
       session[:user_id] = User.find_by(email: 'john.doe@example.com').id
       get :index
