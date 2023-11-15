@@ -58,7 +58,7 @@ RSpec.describe UsersController, type: :controller do
       session[:user_email] = user.email
 
       # Make a POST request to the checkin action with an invalid event_id
-      post :checkin, params: { event_id: 'invalid_event_id' }
+      post :checkin, params: { event_id: event.id, phone_number: "123-123-1234" }
 
       # Assert the response
       expect(response).to redirect_to(user_dashboard_path)
