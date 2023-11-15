@@ -73,6 +73,6 @@ RSpec.feature 'Admin Check-In', type: :feature do
     click_button 'Check-In'
 
     # Add assertions to check for expected behavior
-    expect(page).to have_content('No user found with the specified first name, last name, and email.')  # Replace with your flash message
+    expect(page).to have_content('No user found with the specified first name, last name, and email.') 
   end
 end
